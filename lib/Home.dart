@@ -214,3 +214,52 @@ class Body extends StatelessWidget{
     // );
   }
 }
+
+
+test(){
+  Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                height: 70,
+                child:Row(
+                  children: [
+                    Expanded(
+                        flex: 1,
+                        child:
+                        Container(
+                          child: Image.asset(
+                              "images/hummingbird.png"
+                          ),
+                          height: 70,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(10.0),
+                                bottomLeft: Radius.circular(10.0)),
+                            color: Colors.black26,
+                          ),
+                        ) ),
+                    Expanded(
+                      flex: 3,
+                      child: Container(
+                        height: 70,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(10.0),
+                              bottomRight: Radius.circular(10.0)),
+                          color: Colors.amber,
+                        ),
+                        child: (Row(
+                          children: <Widget>[
+                            Text(
+
+                              'This is a Container',
+                              textScaleFactor: 2,
+                              style: TextStyle(color: Colors.black),
+                            ),
+                          ],
+                        )),
+                      ),
+                    )
+                  ],)) ,
+}
