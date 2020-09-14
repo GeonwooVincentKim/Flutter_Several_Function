@@ -69,7 +69,6 @@ class Body extends StatelessWidget{
                     child: new Text("Hi modal sheet"),
                   )
               ),
-              
               // padding: EdgeInsets.only(left: 12.0),
               // decoration: BoxDecoration(
               //   borderRadius: BorderRadius.circular(10.0),
