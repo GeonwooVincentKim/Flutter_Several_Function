@@ -53,41 +53,42 @@ class Body extends StatelessWidget{
             ),
 
             Container(
-              height: 100.0,
-              color: Colors.transparent,
-              child: new Container(
-                  decoration: new BoxDecoration(
-                      color: Colors.green,
-                      borderRadius: new BorderRadius.only(
-                        topLeft: const Radius.circular(20.0),
-                        topRight: const Radius.circular(20.0),
-                        bottomLeft: const Radius.circular(20.0),
-                        bottomRight: const Radius.circular(20.0),
-                      )
-                  ),
-                  child: new Center(
-                    child: new Text("Hi modal sheet"),
-                  )
+              // height: 100.0,
+              // color: Colors.transparent,
+              // child: new Container(
+              //     decoration: new BoxDecoration(
+              //         color: Colors.green,
+              //         borderRadius: new BorderRadius.only(
+              //           topLeft: const Radius.circular(20.0),
+              //           topRight: const Radius.circular(20.0),
+              //           bottomLeft: const Radius.circular(20.0),
+              //           bottomRight: const Radius.circular(20.0),
+              //         )
+              //     ),
+              //     child: new Center(
+              //       child: new Text("Hi modal sheet"),
+              //     )
+              // ),
+              padding: EdgeInsets.only(left: 120.0),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10.0),
+                color: Colors.green,
               ),
-              // padding: EdgeInsets.only(left: 12.0),
-              // decoration: BoxDecoration(
-              //   borderRadius: BorderRadius.circular(10.0),
-              //   color: Colors.green,
-              // ),
-              // height: 50,
-              // child: Container(
-              //   decoration: BoxDecoration(
-              //     borderRadius: BorderRadius.only(
-              //         topRight: Radius.circular(10.0),
-              //         bottomRight: Radius.circular(10.0)),
-              //     color: Colors.white,
-              //   ),
-              //   child: Text(
-              //     'This is a Container',
-              //     textScaleFactor: 2,
-              //     style: TextStyle(color: Colors.black),
-              //   ),
-              // ),
+              height: 70,
+              child: Container(
+                padding: EdgeInsets.only(left: 20),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(10.0),
+                      bottomRight: Radius.circular(10.0)),
+                  color: Colors.white,
+                ),
+                child: Text(
+                  'This is a Container',
+                  textScaleFactor: 2,
+                  style: TextStyle(color: Colors.black),
+                ),
+              ),
             ),
            // Center(
               // child: ClipRect(
