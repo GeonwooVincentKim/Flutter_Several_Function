@@ -76,18 +76,32 @@ class Body extends StatelessWidget{
               ),
               height: 70,
               child: Container(
-                padding: EdgeInsets.only(left: 20),
+                // child: Padding(
+                //   padding: const EdgeInsets.all(8.0),
+                //   child: Image(
+                //     height: 100,
+                //     width: 100,
+                //     image: NetworkImage("https://www.gstatic.com/webp/gallery/1.jpg"),
+                //   ),
+                // ),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(10.0),
-                      bottomRight: Radius.circular(10.0)),
+                  topRight: Radius.circular(10.0),
+                  bottomRight: Radius.circular(10.0)),
                   color: Colors.white,
                 ),
-                child: Text(
-                  'This is a Container',
-                  textScaleFactor: 2,
-                  style: TextStyle(color: Colors.black),
+                child: (
+                  Row(
+                    children: <Widget>[
+                      Text(
+                        'This is a Container',
+                        textScaleFactor: 2,
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ],
+                  )
                 ),
+
               ),
             ),
            // Center(
