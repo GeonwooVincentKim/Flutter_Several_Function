@@ -76,16 +76,6 @@ class Body extends StatelessWidget{
                                 image: NetworkImage("https://www.gstatic.com/webp/gallery/1.jpg")
                               ),
                           ),
-                          // child: Image(
-                          //   image: NetworkImage("https://www.gstatic.com/webp/gallery/1.jpg"),
-                          // ),
-                          // height: 70,
-                          // decoration: BoxDecoration(
-                          //   borderRadius: BorderRadius.only(
-                          //       topLeft: Radius.circular(10.0),
-                          //       bottomLeft: Radius.circular(10.0)),
-                          //   color: Colors.black26,
-                          // ),
                         ) ),
                     Expanded(
                       flex: 3,
@@ -97,18 +87,19 @@ class Body extends StatelessWidget{
                               bottomRight: Radius.circular(10.0)),
                           color: Colors.amber,
                         ),
-                        child: (Row(
+                        child: (Column(
                           children: <Widget>[
                             Text(
-                              'This is a Container',
+                              'Title',
                               textScaleFactor: 2,
                               textDirection: TextDirection.ltr,
-                              textAlign: TextAlign.center,
+                              textAlign: TextAlign.left,
                               style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 15,
                               ),
                             ),
+                            Text("Hi"),
                           ],
                         )),
                       ),
@@ -145,53 +136,4 @@ class Body extends StatelessWidget{
 
     );
   }
-}
-
-
-test(){
-  Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10.0),
-      ),
-      height: 70,
-      child:Row(
-        children: [
-          Expanded(
-              flex: 1,
-              child:
-              Container(
-                child: Image.asset(
-                    "images/hummingbird.png"
-                ),
-                height: 70,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(10.0),
-                      bottomLeft: Radius.circular(10.0)),
-                  color: Colors.black26,
-                ),
-              ) ),
-          Expanded(
-            flex: 3,
-            child: Container(
-              height: 70,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(10.0),
-                    bottomRight: Radius.circular(10.0)),
-                color: Colors.amber,
-              ),
-              child: (Row(
-                children: <Widget>[
-                  Text(
-
-                    'This is a Container',
-                    textScaleFactor: 2,
-                    style: TextStyle(color: Colors.black),
-                  ),
-                ],
-              )),
-            ),
-          )
-        ],));
 }
