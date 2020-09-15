@@ -42,6 +42,7 @@ class Body extends StatelessWidget{
             ),
             divider(),
             // Import buttons that combined Image and Text.
+            // For the codes that belows 'IN PROGRESS'.
             Expanded(
               child: ListView.separated(
                   separatorBuilder: (context, index) => Divider(
@@ -51,10 +52,6 @@ class Body extends StatelessWidget{
                   itemBuilder: (context, index) => _buildBodyDetails()
               ),
             ),
-            // Body_Details(),
-            // SizedBox(height: 15),
-            // Body_Details(),
-            // SizedBox(height: 50),
             Row(
               children: <Widget>[
                 // Import expanded_widgets_down class.
@@ -62,18 +59,15 @@ class Body extends StatelessWidget{
               ],
             ),
             divider(),
-            // Body_Details(),
-            // SizedBox(height: 15),
-            // Body_Details(),
-            // SizedBox(height: 15),
-            // Body_Details(),
-            // SizedBox(height: 15),
-            // Body_Details(),
 
+            // For the codes that belows 'COMPILED'.
             Expanded(
-              child: ListView.builder(
-                itemCount: list_down.length,
-                itemBuilder: (context, index) => _buildBodyDetails()
+              child: ListView.separated(
+                  separatorBuilder: (context, index) => Divider(
+                    color: Colors.transparent,
+                  ),
+                  itemCount: list_down.length,
+                  itemBuilder: (context, index) => _buildBodyDetails()
               ),
             ),
           ],
@@ -89,7 +83,6 @@ class Body extends StatelessWidget{
     return Body_Details();
   }
 }
-
 
 // ignore: camel_case_types
 class Body_Details extends StatelessWidget{
