@@ -49,7 +49,8 @@ class Body extends StatelessWidget{
               ],
             ),
             divider(),
-            Body_Details(),
+            _buildBodyDetails(),
+            // Body_Details(),
             SizedBox(height: 15),
             Body_Details(),
             SizedBox(height: 15),
@@ -62,6 +63,13 @@ class Body extends StatelessWidget{
       // onTap: (){
       //   Scaffold.of(context).showSnackBar(SnackBar(content: Text('Tap')));
       // },
+    );
+  }
+
+  Widget _buildBodyDetails(){
+    var list = ["Title1", "Title2", "Title3", "Title4", "Title5", "Title6"];
+    return Expanded (
+      child: Body_Details(),
     );
   }
 }
