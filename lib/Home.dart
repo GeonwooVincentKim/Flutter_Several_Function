@@ -81,6 +81,7 @@ class Body extends StatelessWidget{
                       flex: 3,
                       child: Container(
                         height: 70,
+                        padding: EdgeInsets.only(left: 10.0, top: 5.0),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.only(
                               topRight: Radius.circular(10.0),
@@ -89,22 +90,34 @@ class Body extends StatelessWidget{
                         ),
                         child: (Column(
                           children: <Widget>[
-                            Text(
-                              'Title',
-                              textScaleFactor: 2,
-                              textDirection: TextDirection.ltr,
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 15,
-                              ),
+                            Column(
+                                children: <Widget>[
+                                  Align(
+                                    alignment: Alignment.centerLeft,
+                                    // padding: EdgeInsets.only(left: 10.0),
+                                    child: Text(
+                                      'Title',
+                                      textScaleFactor: 2,
+                                      textDirection: TextDirection.ltr,
+                                      textAlign: TextAlign.left,
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 15,
+                                      ),
+                                    ),
+                                  ),
+                                  Align(
+                                    alignment: Alignment.bottomLeft,
+                                    child: Text("Hi"),
+                                  ),
+                                ],
                             ),
-                            Text("Hi"),
                           ],
                         )),
                       ),
                     )
-                  ],)),
+                  ],)
+            ),
             const Divider(
               height: 40,
             ),

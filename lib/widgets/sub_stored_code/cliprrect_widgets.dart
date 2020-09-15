@@ -112,7 +112,8 @@ clip_r_rect_widgets(){
         ],));
 }
 
-test() {
+// ignore: non_constant_identifier_names
+clip_r_rect_widgets_and_images(){
   return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10.0),
@@ -157,5 +158,6 @@ test() {
               )),
             ),
           )
-        ],));
+        ],)
+  );
 }
