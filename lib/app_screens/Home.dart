@@ -32,20 +32,30 @@ class Body extends StatelessWidget{
           children: <Widget>[
             Row(
               children: <Widget>[
-                // Import expanded_widgets function.
+                // Import expanded_widgets class.
                 expanded_widgets(),
               ],
             ),
             divider(),
+            // Import buttons that combined Image and Text.
+            Body_Details(),
+            SizedBox(height: 15),
             Body_Details(),
             SizedBox(height: 50),
             Row(
               children: <Widget>[
-                // Import expanded_widgets function.
-                expanded_widgets(),
+                // Import expanded_widgets_down class.
+                expanded_widgets_down(),
               ],
             ),
             divider(),
+            Body_Details(),
+            SizedBox(height: 15),
+            Body_Details(),
+            SizedBox(height: 15),
+            Body_Details(),
+            SizedBox(height: 15),
+            Body_Details(),
           ],
         ),
       ),
@@ -77,7 +87,8 @@ class Body_Details extends StatelessWidget{
                 flex: 3,
                 child: expanded_widgets_down_detail()
             )
-          ],)
+          ],
+        ),
     );
   }
 }

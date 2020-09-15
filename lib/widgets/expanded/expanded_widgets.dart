@@ -21,6 +21,27 @@ class expanded_widgets extends StatelessWidget{
 }
 
 
+class expanded_widgets_down extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Text(
+        "COMPLETED",
+        textDirection: TextDirection.ltr,
+        style: TextStyle(
+            decoration: TextDecoration.none,
+            fontSize: 25.0,
+            fontFamily: "icomoon",
+            fontWeight: FontWeight.w700,
+            color: Colors.black87
+        ),
+      ),
+    );
+  }
+  
+}
+
+
 // ignore: camel_case_types
 class expanded_widgets_up_detail extends StatelessWidget{
   @override
