@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/widgets/expanded/divider.dart';
+import 'package:flutter_app/widgets/expanded/expanded_widgets.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -30,27 +32,11 @@ class Body extends StatelessWidget{
           children: <Widget>[
             Row(
               children: <Widget>[
-                Expanded(
-                  child: Text(
-                    "IN PROGRESS",
-                    textDirection: TextDirection.ltr,
-                    style: TextStyle(
-                        decoration: TextDecoration.none,
-                        fontSize: 25.0,
-                        fontFamily: "icomoon",
-                        fontWeight: FontWeight.w700,
-                        color: Colors.black87
-                    ),
-                  ),
-                ),
-
+                // Import expanded_widgets function.
+                expanded_widgets(),
               ],
             ),
-            const Divider(
-              color: Colors.black,
-              height: 40,
-            ),
-
+            divider(),
             Container(
                 // padding: EdgeInsets.only(left: 9.0),
                 decoration: BoxDecoration(
@@ -101,6 +87,7 @@ class Body extends StatelessWidget{
                                       textAlign: TextAlign.left,
                                       style: TextStyle(
                                         color: Colors.black,
+                                        fontFamily: "icomoon",
                                         fontSize: 12,
                                       ),
                                     ),
@@ -121,31 +108,14 @@ class Body extends StatelessWidget{
                     )
                   ],)
             ),
-            const Divider(
-              height: 40,
-            ),
+            SizedBox(height: 50),
             Row(
               children: <Widget>[
-                Expanded(
-                  child: Text(
-                    "Korean-Air",
-                    textDirection: TextDirection.ltr,
-                    style: TextStyle(
-                        decoration: TextDecoration.none,
-                        fontSize: 25.0,
-                        fontFamily: "Raleway",
-                        fontWeight: FontWeight.w700,
-                        fontStyle: FontStyle.italic,
-                        color: Colors.black87
-                    ),
-                  ),
-                ),
+                // Import expanded_widgets function.
+                expanded_widgets(),
               ],
             ),
-            const Divider(
-              color: Colors.black,
-              height: 40,
-            ),
+            divider(),
           ],
         ),
       )
