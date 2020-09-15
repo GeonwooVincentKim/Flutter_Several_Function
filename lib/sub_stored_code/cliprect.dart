@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: non_constant_identifier_names
 apply_without_cliprect() {
     // Trying to apply Center and ClipRect function.
     return Center(
@@ -52,6 +53,7 @@ apply_without_cliprect() {
     );
 }
 
+// ignore: non_constant_identifier_names
 apply_with_cliprect(){
   return Center(
       child: ClipRect(
