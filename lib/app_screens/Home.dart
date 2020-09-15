@@ -23,6 +23,10 @@ class Home extends StatelessWidget {
 class Body extends StatelessWidget{
   @override
   Widget build(BuildContext context){
+
+    var list = ["Title1", "Title2", "Title3"];
+    var list_down = ["Title4", "Title5", "Title6", "Title7"];
+
     return Center(
       child: Container(
         padding: EdgeInsets.only(left: 10.0, top: 20.0),
@@ -38,10 +42,19 @@ class Body extends StatelessWidget{
             ),
             divider(),
             // Import buttons that combined Image and Text.
-            Body_Details(),
-            SizedBox(height: 15),
-            Body_Details(),
-            SizedBox(height: 50),
+            Expanded(
+              child: ListView.separated(
+                  separatorBuilder: (context, index) => Divider(
+                    color: Colors.transparent,
+                  ),
+                  itemCount: list.length,
+                  itemBuilder: (context, index) => _buildBodyDetails()
+              ),
+            ),
+            // Body_Details(),
+            // SizedBox(height: 15),
+            // Body_Details(),
+            // SizedBox(height: 50),
             Row(
               children: <Widget>[
                 // Import expanded_widgets_down class.
@@ -49,14 +62,20 @@ class Body extends StatelessWidget{
               ],
             ),
             divider(),
-            _buildBodyDetails(),
             // Body_Details(),
-            SizedBox(height: 15),
-            Body_Details(),
-            SizedBox(height: 15),
-            Body_Details(),
-            SizedBox(height: 15),
-            Body_Details(),
+            // SizedBox(height: 15),
+            // Body_Details(),
+            // SizedBox(height: 15),
+            // Body_Details(),
+            // SizedBox(height: 15),
+            // Body_Details(),
+
+            Expanded(
+              child: ListView.builder(
+                itemCount: list_down.length,
+                itemBuilder: (context, index) => _buildBodyDetails()
+              ),
+            ),
           ],
         ),
       ),
@@ -67,10 +86,7 @@ class Body extends StatelessWidget{
   }
 
   Widget _buildBodyDetails(){
-    var list = ["Title1", "Title2", "Title3", "Title4", "Title5", "Title6"];
-    return Expanded (
-      child: Body_Details(),
-    );
+    return Body_Details();
   }
 }
 
