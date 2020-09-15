@@ -76,11 +76,23 @@ class expanded_widgets_down_detail extends StatelessWidget{
               ),
               Align(
                 alignment: Alignment.bottomLeft,
-                child: Text("Hi"),
+                child: Text(
+                  "Platform: PS4 | Genre : RPG",
+                  style: TextStyle(
+                    color: Colors.black26,
+                    fontFamily: "icomoon",
+                  ),
+                ),
               ),
               Align(
                 alignment: Alignment.bottomLeft,
-                child: Text("Hi"),
+                child: Text(
+                  "Progression: 50%",
+                  style: TextStyle(
+                    color: Colors.black26,
+                    fontFamily: "icomoon",
+                  ),
+                ),
               ),
             ],
           ),

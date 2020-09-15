@@ -37,24 +37,7 @@ class Body extends StatelessWidget{
               ],
             ),
             divider(),
-            Container(
-                // padding: EdgeInsets.only(left: 9.0),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-                height: 70,
-                child: Row(
-                  children: [
-                    Expanded(
-                        flex: 1,
-                        child: expanded_widgets_up_detail()
-                    ),
-                    Expanded(
-                      flex: 3,
-                      child: expanded_widgets_down_detail()
-                    )
-                  ],)
-            ),
+            Body_Details(),
             SizedBox(height: 50),
             Row(
               children: <Widget>[
@@ -65,7 +48,36 @@ class Body extends StatelessWidget{
             divider(),
           ],
         ),
-      )
+      ),
+      // onTap: (){
+      //   Scaffold.of(context).showSnackBar(SnackBar(content: Text('Tap')));
+      // },
+    );
+  }
+}
+
+
+// ignore: camel_case_types
+class Body_Details extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      // padding: EdgeInsets.only(left: 9.0),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10.0),
+        ),
+        height: 70,
+        child: Row(
+          children: [
+            Expanded(
+                flex: 1,
+                child: expanded_widgets_up_detail()
+            ),
+            Expanded(
+                flex: 3,
+                child: expanded_widgets_down_detail()
+            )
+          ],)
     );
   }
 }
