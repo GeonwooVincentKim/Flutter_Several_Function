@@ -52,7 +52,7 @@ class Body extends StatelessWidget{
               height: 40,
             ),
 
-            Container(
+            // Container(
               // height: 100.0,
               // color: Colors.transparent,
               // child: new Container(
@@ -69,13 +69,13 @@ class Body extends StatelessWidget{
               //       child: new Text("Hi modal sheet"),
               //     )
               // ),
-              padding: EdgeInsets.only(left: 120.0),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10.0),
-                color: Colors.green,
-              ),
-              height: 70,
-              child: Container(
+            //  padding: EdgeInsets.only(left: 120.0),
+            //  decoration: BoxDecoration(
+            //    borderRadius: BorderRadius.circular(10.0),
+            //    color: Colors.green,
+            //  ),
+            //  height: 70,
+            //  child: Container(
                 // child: Padding(
                 //   padding: const EdgeInsets.all(8.0),
                 //   child: Image(
@@ -84,75 +84,72 @@ class Body extends StatelessWidget{
                 //     image: NetworkImage("https://www.gstatic.com/webp/gallery/1.jpg"),
                 //   ),
                 // ),
+               // decoration: BoxDecoration(
+               //   borderRadius: BorderRadius.only(
+               //   topRight: Radius.circular(10.0),
+               //   bottomRight: Radius.circular(10.0)),
+               //   color: Colors.white,
+               // ),
+               // child: (
+               //    Row(
+               //      children: <Widget>[
+               //        Text(
+               //          'This is a Container',
+               //          textScaleFactor: 2,
+               //          style: TextStyle(color: Colors.black),
+               //        ),
+               //      ],
+               //    )
+               //  ),
+
+             // ),
+           // ),
+
+            Container(
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(10.0),
-                  bottomRight: Radius.circular(10.0)),
-                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10.0),
                 ),
-                child: (
-                  Row(
-                    children: <Widget>[
-                      Text(
-                        'This is a Container',
-                        textScaleFactor: 2,
-                        style: TextStyle(color: Colors.black),
+                height: 70,
+                child:Row(
+                  children: [
+                    Expanded(
+                        flex: 1,
+                        child:
+                        Container(
+                          child: Image.asset(
+                              "images/hummingbird.png"
+                          ),
+                          height: 70,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(10.0),
+                                bottomLeft: Radius.circular(10.0)),
+                            color: Colors.black26,
+                          ),
+                        ) ),
+                    Expanded(
+                      flex: 3,
+                      child: Container(
+                        height: 70,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(10.0),
+                              bottomRight: Radius.circular(10.0)),
+                          color: Colors.amber,
+                        ),
+                        child: (Row(
+                          children: <Widget>[
+                            Text(
+
+                              'This is a Container',
+                              textScaleFactor: 2,
+                              style: TextStyle(color: Colors.black),
+                            ),
+                          ],
+                        )),
                       ),
-                    ],
-                  )
-                ),
-
-              ),
-            ),
-           // Center(
-              // child: ClipRect(
-              //   child: Align(
-              //     alignment: Alignment.topCenter,
-              //     heightFactor: 0.5,
-              //     child: Image.network("https://www.gstatic.com/webp/gallery/1.jpg"),
-              //   ),
-
-              //   Container(
-              //     alignment: Alignment.topLeft,
-              //     color: Colors.transparent,
-              //     child: Column(
-              //       children: <Widget>[
-              //         Row(
-              //           children: <Widget>[
-              //             Padding(
-              //               padding: const EdgeInsets.all(8.0),
-              //               child: Image(
-              //                 height: 100,
-              //                 width: 100,
-              //                 image: NetworkImage("https://www.gstatic.com/webp/gallery/1.jpg"),
-              //               ),
-              //             ),
-              //             Column(
-              //               children: <Widget>[
-              //                 Text(
-              //                   "Title",
-              //                   textDirection: TextDirection.ltr,
-              //                   textAlign: TextAlign.left,
-              //                   style: TextStyle(
-              //                     fontSize: 20,
-              //                   ),
-              //                 ),
-              //                 Text("Author name"),
-              //
-              //                 Divider(
-              //                   color: Colors.black,
-              //                 )
-              //               ],
-              //             )
-              //           ],
-              //         ),
-              //       ],
-              //     ),
-              //   ),
-
-             // )
-            // ),
-
+                    )
+                  ],)),
             const Divider(
               height: 40,
             ),
@@ -218,48 +215,48 @@ class Body extends StatelessWidget{
 
 test(){
   Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10.0),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10.0),
+      ),
+      height: 70,
+      child:Row(
+        children: [
+          Expanded(
+              flex: 1,
+              child:
+              Container(
+                child: Image.asset(
+                    "images/hummingbird.png"
                 ),
                 height: 70,
-                child:Row(
-                  children: [
-                    Expanded(
-                        flex: 1,
-                        child:
-                        Container(
-                          child: Image.asset(
-                              "images/hummingbird.png"
-                          ),
-                          height: 70,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(10.0),
-                                bottomLeft: Radius.circular(10.0)),
-                            color: Colors.black26,
-                          ),
-                        ) ),
-                    Expanded(
-                      flex: 3,
-                      child: Container(
-                        height: 70,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.only(
-                              topRight: Radius.circular(10.0),
-                              bottomRight: Radius.circular(10.0)),
-                          color: Colors.amber,
-                        ),
-                        child: (Row(
-                          children: <Widget>[
-                            Text(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(10.0),
+                      bottomLeft: Radius.circular(10.0)),
+                  color: Colors.black26,
+                ),
+              ) ),
+          Expanded(
+            flex: 3,
+            child: Container(
+              height: 70,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(10.0),
+                    bottomRight: Radius.circular(10.0)),
+                color: Colors.amber,
+              ),
+              child: (Row(
+                children: <Widget>[
+                  Text(
 
-                              'This is a Container',
-                              textScaleFactor: 2,
-                              style: TextStyle(color: Colors.black),
-                            ),
-                          ],
-                        )),
-                      ),
-                    )
-                  ],)) ,
+                    'This is a Container',
+                    textScaleFactor: 2,
+                    style: TextStyle(color: Colors.black),
+                  ),
+                ],
+              )),
+            ),
+          )
+        ],));
 }
