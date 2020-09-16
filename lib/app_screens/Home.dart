@@ -5,6 +5,10 @@ import 'package:flutter_app/widgets/expanded/expanded_widgets.dart';
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var itemList = [
+      "IN_PROGRESS", "Title1", "Title2", "Title3",
+      "COMPLETED", "Title4", "Title5", "Title6",
+    ];
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black87,
@@ -14,6 +18,7 @@ class Home extends StatelessWidget {
           ),
         ),
       ),
+      // body: Body(),
       body: Body(),
     );
   }
@@ -23,8 +28,11 @@ class Home extends StatelessWidget {
 class Body extends StatelessWidget{
   @override
   Widget build(BuildContext context){
-
-    var list = ["Title1", "Title2", "Title3"];
+    var itemList = [
+      "IN_PROGRESS", "Title1", "Title2", "Title3",
+      "COMPLETED", "Title4", "Title5", "Title6",
+    ];
+    var list_up = ["Title1", "Title2", "Title3"];
     var list_down = ["Title4", "Title5", "Title6", "Title7"];
 
     return Center(
@@ -34,6 +42,9 @@ class Body extends StatelessWidget{
         color: Colors.black12,
         child: Column(
           children: <Widget>[
+            // ...list_up.map((item) {
+            //
+            // }).toList(),
             Row(
               children: <Widget>[
                 // Import expanded_widgets class.
@@ -48,7 +59,7 @@ class Body extends StatelessWidget{
                   separatorBuilder: (context, index) => Divider(
                     color: Colors.transparent,
                   ),
-                  itemCount: list.length,
+                  itemCount: list_up.length,
                   itemBuilder: (context, index) => _buildBodyDetails()
               ),
             ),
@@ -82,6 +93,31 @@ class Body extends StatelessWidget{
   Widget _buildBodyDetails(){
     return Body_Details();
   }
+}
+
+
+// ignore: camel_case_types
+class Body_Divide_Test extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    var itemList = [
+      "IN_PROGRESS", "Title1", "Title2", "Title3",
+      "COMPLETED", "Title4", "Title5", "Title6",
+    ];
+    var list_up = ["Title1", "Title2", "Title3"];
+    var list_down = ["Title4", "Title5", "Title6", "Title7"];
+    Expanded(
+      child: ListView.separated(
+          separatorBuilder: (context, index) => Divider(
+            color: Colors.transparent,
+          ),
+          itemCount: list_down.length,
+          itemBuilder: (context, index) => _buildBodyDetails()
+      ),
+    );
+  }
+
+  // Connects to Body_Details class.
 }
 
 // ignore: camel_case_types
