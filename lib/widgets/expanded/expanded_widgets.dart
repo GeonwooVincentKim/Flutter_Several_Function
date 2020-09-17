@@ -78,7 +78,7 @@ class expanded_widgets_down_detail extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 70,
+      height: 67,
       padding: EdgeInsets.only(left: 10.0, top: 5.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.only(

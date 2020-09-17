@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/widgets/expanded/divider.dart';
+import 'package:flutter_app/widgets/expanded/expanded_widgets.dart';
+
+import 'expanded_widgets/expanded_widgets_discover.dart';
 
 class DiscoverPage extends StatelessWidget{
   @override
@@ -25,7 +28,7 @@ class DiscoverBody extends StatelessWidget{
     ];
     return Center(
       child: Container(
-        padding: EdgeInsets.only(left: 10.0, top: 20.0),
+        padding: EdgeInsets.only(right: 5.0, top: 20.0),
         alignment: Alignment.topLeft,
         color: Colors.black12,
         child: Column(
@@ -39,8 +42,6 @@ class DiscoverBody extends StatelessWidget{
                     itemBuilder: (context, index) => _buildDiscoverBodyDetails()
                   )
               ),
-
-              divider(),
             ]
         ),
       ),
@@ -48,7 +49,7 @@ class DiscoverBody extends StatelessWidget{
   }
 
   Widget _buildDiscoverBodyDetails(){
-
+    return DiscoverBodyDetails();
   }
 }
 
@@ -60,12 +61,16 @@ class DiscoverBodyDetails extends StatelessWidget{
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10.0),
       ),
-      height: 150,
+      height: 220,
       child: Column(
         children: [
           Expanded(
+            flex: 3,
+            child: expanded_widgets_discover_up_detail(),
+          ),
+          Expanded(
             flex: 1,
-
+            child: expanded_widgets_discover_down_detail(),
           ),
         ],
       ),
