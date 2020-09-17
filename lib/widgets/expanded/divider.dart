@@ -11,7 +11,7 @@ class divider extends StatelessWidget{
   }
 }
 
-
+// ignore: camel_case_types
 class transparent_divider extends StatelessWidget{
   @override
   Widget build(BuildContext context) {

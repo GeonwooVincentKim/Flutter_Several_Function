@@ -33,67 +33,9 @@ class Body extends StatelessWidget{
       "IN_PROGRESS", "Line", "Title1", "Title2", "Title3",
       "COMPLETED", "Title4", "Title5", "Title6",
     ];
-    var list_up = ["Title1", "Title2", "Title3"];
-    var list_down = ["Title4", "Title5", "Title6", "Title7"];
+    var listUp = ["Title1", "Title2", "Title3"];
+    var listDown = ["Title4", "Title5", "Title6", "Title7"];
     // var list_down = ["Title4", "Title5", "Title6", "Title7", "Title8", "Title9", "Title10", "Title10", "Title10", ];
-
-    // return Expanded(
-    //     child: Center(
-    //       child: Container(
-    //         height: 80,
-    //         width: 100,
-    //         padding: EdgeInsets.only(left: 10.0, top: 20.0),
-    //         alignment: Alignment.topLeft,
-    //         color: Colors.black12,
-    //         child: Column(
-    //           children: <Widget>[
-    //             // ...list_up.map((item) {
-    //             //
-    //             // }).toList(),
-    //             Row(
-    //               children: <Widget>[
-    //                 // Import expanded_widgets class.
-    //                 expanded_widgets(),
-    //               ],
-    //             ),
-    //             divider(),
-    //             // Import buttons that combined Image and Text.
-    //             // For the codes that belows 'IN PROGRESS'.
-    //             Expanded(
-    //               child: ListView.separated(
-    //                   separatorBuilder: (context, index) => Divider(
-    //                     color: Colors.transparent,
-    //                   ),
-    //                   itemCount: list_up.length,
-    //                   itemBuilder: (context, index) => _buildBodyDetails()
-    //               ),
-    //             ),
-    //             Row(
-    //               children: <Widget>[
-    //                 // Import expanded_widgets_down class.
-    //                 expanded_widgets_down(),
-    //               ],
-    //             ),
-    //             divider(),
-    //
-    //             // For the codes that belows 'COMPILED'.
-    //             Expanded(
-    //               child: ListView.separated(
-    //                   separatorBuilder: (context, index) => Divider(
-    //                     color: Colors.transparent,
-    //                   ),
-    //                   itemCount: list_down.length,
-    //                   itemBuilder: (context, index) => _buildBodyDetails()
-    //               ),
-    //             ),
-    //           ],
-    //         ),
-    //       ),
-    //       // onTap: (){
-    //       //   Scaffold.of(context).showSnackBar(SnackBar(content: Text('Tap')));
-    //       // },
-    //     ),
-    // );
 
 
     // return LayoutBuilder(
@@ -126,8 +68,26 @@ class Body extends StatelessWidget{
                         shrinkWrap: true,
                         separatorBuilder: (context, index) =>
                             transparent_divider(),
-                        itemCount: list_up.length,
-                        itemBuilder: (context, index) => _buildBodyDetails()
+                        itemCount: listUp.length,
+                        itemBuilder: (context, index) {
+                          final item = listUp[index];
+                          return Dismissible(
+                            key: Key(item),
+                            onDismissed: (direction) {
+                              // setState(() {
+                              //   listUp.removeAt(index);
+                              // });
+                              Scaffold.of(context).showSnackBar(
+                                SnackBar(content:
+                                  Text("$item dismissed")
+                                )
+                              );
+                            },
+                            background: Container(color: Colors.red),
+                            child: _buildBodyDetails()
+                          );
+                        }
+                        // itemBuilder: (context, index) => _buildBodyDetails()
                     ),
                   ),
                 ]
@@ -154,7 +114,7 @@ class Body extends StatelessWidget{
                             color: Colors.transparent,
                           ),
                         shrinkWrap: true,
-                        itemCount: list_down.length,
+                        itemCount: listDown.length,
                         itemBuilder: (context, index) => _buildBodyDetails()
                     ),
                   ),
