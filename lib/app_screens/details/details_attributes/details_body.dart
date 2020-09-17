@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/widgets/expanded/divider.dart';
 import 'package:flutter_app/widgets/expanded/expanded_widgets.dart';
 
 class DetailPage extends StatelessWidget{
@@ -29,13 +30,19 @@ class DetailBody extends StatelessWidget{
         color: Colors.black12,
         child: Column(
           children: <Widget>[
-            Row(
-              children: <Widget>[
-                expanded_widgets_up(),
-              ],
-            )
+            Text("Test"),
+            Text("Test"),
           ],
         ),
+        // child: Column(
+        //   children: <Widget>[
+        //     Row(
+        //       children: <Widget>[
+        //         expanded_widgets_up(),
+        //       ],
+        //     )
+        //   ],
+        // ),
       ),
     );
   }

@@ -13,6 +13,8 @@ class expanded_widgets_discover_up_detail extends StatelessWidget{
           topLeft: Radius.circular(10.0),
           topRight: Radius.circular(10.0),
         ),
+
+        // Make it fits to the box.
         child: FittedBox(
           child: Image(
             image: NetworkImage("https://www.gstatic.com/webp/gallery/1.jpg")
