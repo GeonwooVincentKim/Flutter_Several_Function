@@ -27,7 +27,7 @@ class Body extends StatelessWidget{
             Row(
               children: <Widget>[
                 // Import expanded_widgets class.
-                expanded_widgets(),
+                expanded_widgets_up(),
               ],
             ),
             divider(),
@@ -74,7 +74,7 @@ class New_Body extends StatelessWidget{
             Row(
               children: <Widget>[
                 // Import expanded_widgets class.
-                expanded_widgets(),
+                expanded_widgets_up(),
               ],
             ),
             divider(),
@@ -140,7 +140,7 @@ class Body_Expanded extends StatelessWidget{
                 Row(
                   children: <Widget>[
                     // Import expanded_widgets class.
-                    expanded_widgets(),
+                    expanded_widgets_up(),
                   ],
                 ),
                 divider(),

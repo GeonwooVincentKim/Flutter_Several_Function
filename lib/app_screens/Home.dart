@@ -6,10 +6,6 @@ import 'package:flutter/src/widgets/framework.dart';
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var itemList = [
-      "IN_PROGRESS", "Title1", "Title2", "Title3",
-      "COMPLETED", "Title4", "Title5", "Title6",
-    ];
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black87,
@@ -55,7 +51,7 @@ class Body extends StatelessWidget{
               Row(
                 children: <Widget>[
                   // Import expanded_widgets class.
-                  expanded_widgets(),
+                  expanded_widgets_up(),
                 ],
               ),
               divider(),
@@ -153,10 +149,12 @@ class Body_Details extends StatelessWidget{
           children: [
             Expanded(
                 flex: 1,
+                // For Top-part Widgets, the Main
                 child: expanded_widgets_up_detail()
             ),
             Expanded(
                 flex: 3,
+                // For Below-part Widgets, the Main
                 child: expanded_widgets_down_detail()
             )
           ],

@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
+/*
+  Text-Attributes for Main
+  1. expanded_widgets_up
+  2. expanded_widgets_down
+*/
 // ignore: non_constant_identifier_names, camel_case_types
-class expanded_widgets extends StatelessWidget{
+class expanded_widgets_up extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -42,7 +47,11 @@ class expanded_widgets_down extends StatelessWidget{
   
 }
 
-
+/*
+  Image-Attributes for Main
+  1. expanded_widgets_up_detail
+  2. expanded_widgets_down_detail
+*/
 // ignore: camel_case_types
 class expanded_widgets_up_detail extends StatelessWidget{
   @override
