@@ -49,11 +49,26 @@ class DetailBodyText extends StatelessWidget{
               children: <Widget>[
                 // Title
                 expanded_widgets_details_up(),
-                expanded_widgets_details_down_detail(),
               ],
             ),
           ],
         )
     );
   }
+}
+
+//
+class DetailBodyVideo extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.only(left: 10.0, top: 15.0),
+      child: Column(
+        children: <Widget>[
+          expanded_widgets_details_down_detail(),
+        ]
+      ),
+    );
+  }
+
 }

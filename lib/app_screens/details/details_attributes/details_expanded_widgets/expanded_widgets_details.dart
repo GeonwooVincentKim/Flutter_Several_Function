@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/app_screens/details/details_attributes/details_expanded_widgets/entertainment/video_attributes.dart';
 import 'package:flutter_app/widgets/expanded/divider.dart';
 
 import 'font_style/font_widgets_attribute.dart';
@@ -60,7 +61,14 @@ class expanded_widgets_details_down_detail extends StatelessWidget{
       padding: EdgeInsets.only(right: 10.0, top: 5.0),
       child: Column(
         children: <Widget>[
-
+          Stack(
+            alignment: FractionalOffset.bottomRight +
+                const FractionalOffset(-0.1, -0.1),
+            children: <Widget>[
+              expanded_video_player(),
+              // Image.asset('assets/flutter-mark-square-64.png'),
+            ]),
+          // expanded_video_player(),
         ],
       ),
     );

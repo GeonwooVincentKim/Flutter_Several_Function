@@ -14,6 +14,18 @@ class DetailPage extends StatelessWidget{
         ),
       ),
       body: DetailBody(),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () {
+      //     setState(() {
+      //       _controller.value.isPlaying
+      //           ? _controller.pause()
+      //           : _controller.play();
+      //     });
+      //   },
+      //   child: Icon(
+      //     _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
+      //   ),
+      // ),
     );
   }
 }
@@ -22,6 +34,16 @@ class DetailPage extends StatelessWidget{
 class DetailBody extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
+    // return Center(
+    //     child: _controller.value.initialized
+    //         ? AspectRatio(
+    //       aspectRatio: _controller.value.aspectRatio,
+    //       child: VideoPlayer(_controller),
+    //     )
+    // : Container(
+    //
+    // );
+
     return Center(
       child: Container(
         alignment: Alignment.topLeft,
@@ -35,7 +57,10 @@ class DetailBody extends StatelessWidget{
               _buildDetailsBodyProgressBar(),
               Center(
                 child: _buildDetailBodyText(),
-              )
+              ),
+              Center(
+                child: _buildDetailBodyVideo(),
+              ),
             ],
           ),
         ),
@@ -54,6 +79,10 @@ class DetailBody extends StatelessWidget{
 
   Widget _buildDetailBodyText(){
     return DetailBodyText();
+  }
+
+  Widget _buildDetailBodyVideo(){
+    return DetailBodyVideo();
   }
 }
 
