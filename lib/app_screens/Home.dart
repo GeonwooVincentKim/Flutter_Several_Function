@@ -79,7 +79,14 @@ class Body extends StatelessWidget{
                                 )
                               );
                             },
-                            background: Container(color: Colors.red),
+                            background: Container(
+                              color: Colors.green,
+                              child: Icon(Icons.check),
+                            ),
+                            secondaryBackground: Container(
+                              color: Colors.red,
+                              child: Icon(Icons.cancel),
+                            ),
                             child: _buildBodyDetails()
                           );
                         }
