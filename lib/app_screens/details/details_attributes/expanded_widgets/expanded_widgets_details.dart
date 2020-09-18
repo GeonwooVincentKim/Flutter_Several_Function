@@ -21,6 +21,10 @@ class expanded_widgets_details_up extends StatelessWidget{
           expanded_widgets_sub_font_3(),
           transparent_divider(),
           expanded_widgets_sub_font_4(),
+          transparent_divider(),
+          expanded_widgets_sub_font_5(),
+          transparent_divider(),
+
         ],
       )
     );

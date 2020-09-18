@@ -152,6 +152,7 @@ class Body_Details extends StatelessWidget{
                 // For Top-part Widgets, the Main
                 child: expanded_widgets_up_detail()
             ),
+
             Expanded(
                 flex: 3,
                 // For Below-part Widgets, the Main
