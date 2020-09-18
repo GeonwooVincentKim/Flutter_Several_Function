@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/widgets/expanded/divider.dart';
-import 'package:flutter_app/widgets/expanded/expanded_widgets.dart';
-
 import 'details_body_details.dart';
-import 'expanded_widgets/expanded_widgets_details.dart';
 
 class DetailPage extends StatelessWidget{
   @override

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/widgets/expanded/divider.dart';
 
 
 // For Text-font of 'details-page'.
@@ -7,17 +8,116 @@ class expanded_widgets_details_up extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: Text(
-        "TITLE",
-        textDirection: TextDirection.ltr,
-        style: TextStyle(
-          decoration: TextDecoration.none,
-          fontSize: 25.0,
-          fontFamily: "icomoon",
-          fontWeight: FontWeight.w700,
-          color: Colors.black87
-        ),
-      ),
+      child: Column(
+        children: <Widget>[
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              "TITLE",
+              textDirection: TextDirection.ltr,
+              style: TextStyle(
+                  decoration: TextDecoration.none,
+                  fontSize: 25.0,
+                  fontFamily: "icomoon",
+                  fontWeight: FontWeight.w700,
+                  color: Colors.black87
+              ),
+            ),
+          ),
+          transparent_divider(),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Row(
+              children: <Widget>[
+                Text(
+                  "Platform: ",
+                  textDirection: TextDirection.ltr,
+                  style: TextStyle(
+                      decoration: TextDecoration.none,
+                      fontSize: 15.0,
+                      fontFamily: "icomoon",
+                      fontWeight: FontWeight.w700,
+                      color: Colors.black87
+                  ),
+                ),
+                Text(
+                  "PS4",
+                  textDirection: TextDirection.ltr,
+                  style: TextStyle(
+                    color: Colors.black26,
+                    fontFamily: "icomoon",
+                  ),
+                ),
+                Text(
+                  " | Genre: ",
+                  textDirection: TextDirection.ltr,
+                  style: TextStyle(
+                      decoration: TextDecoration.none,
+                      fontSize: 15.0,
+                      fontFamily: "icomoon",
+                      fontWeight: FontWeight.w700,
+                      color: Colors.black87
+                  ),
+                ),
+                Text(
+                  "RPG",
+                  textDirection: TextDirection.ltr,
+                  style: TextStyle(
+                    color: Colors.black26,
+                    fontFamily: "icomoon",
+                  ),
+                ),
+              ],
+            ),
+          ),
+          transparent_divider(),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Row(
+              children: <Widget>[
+                Text(
+                  "Platform: ",
+                  textDirection: TextDirection.ltr,
+                  style: TextStyle(
+                      decoration: TextDecoration.none,
+                      fontSize: 15.0,
+                      fontFamily: "icomoon",
+                      fontWeight: FontWeight.w700,
+                      color: Colors.black87
+                  ),
+                ),
+                Text(
+                  "PS4",
+                  textDirection: TextDirection.ltr,
+                  style: TextStyle(
+                    color: Colors.black26,
+                    fontFamily: "icomoon",
+                  ),
+                ),
+                Text(
+                  " | Genre: ",
+                  textDirection: TextDirection.ltr,
+                  style: TextStyle(
+                      decoration: TextDecoration.none,
+                      fontSize: 15.0,
+                      fontFamily: "icomoon",
+                      fontWeight: FontWeight.w700,
+                      color: Colors.black87
+                  ),
+                ),
+                Text(
+                  "RPG",
+                  textDirection: TextDirection.ltr,
+                  style: TextStyle(
+                    color: Colors.black26,
+                    fontFamily: "icomoon",
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      )
     );
   }
 }

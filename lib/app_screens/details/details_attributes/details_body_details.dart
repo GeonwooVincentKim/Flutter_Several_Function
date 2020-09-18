@@ -47,6 +47,7 @@ class DetailBodyText extends StatelessWidget{
           children: <Widget>[
             Row(
               children: <Widget>[
+                // Title
                 expanded_widgets_details_up(),
               ],
             ),
