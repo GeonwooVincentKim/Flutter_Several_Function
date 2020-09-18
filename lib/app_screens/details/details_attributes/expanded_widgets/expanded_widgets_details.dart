@@ -1,5 +1,29 @@
 import 'package:flutter/material.dart';
 
+
+// For Text-font of 'details-page'.
+// ignore: camel_case_types
+class expanded_widgets_details_up extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Text(
+        "TITLE",
+        textDirection: TextDirection.ltr,
+        style: TextStyle(
+          decoration: TextDecoration.none,
+          fontSize: 25.0,
+          fontFamily: "icomoon",
+          fontWeight: FontWeight.w700,
+          color: Colors.black87
+        ),
+      ),
+    );
+  }
+}
+
+
+// For Image of 'details-page'.
 // ignore: camel_case_types
 class expanded_widgets_details_up_detail extends StatelessWidget{
   @override
