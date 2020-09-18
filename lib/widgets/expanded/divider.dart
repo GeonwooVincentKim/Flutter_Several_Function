@@ -15,7 +15,7 @@ class divider extends StatelessWidget{
 class transparent_divider extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return Divider(
+    return const Divider(
       color: Colors.transparent,
     );
   }

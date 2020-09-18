@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/widgets/expanded/divider.dart';
 
-import 'font_widgets_attribute.dart';
+import 'font_style/font_widgets_attribute.dart';
 
 
 // For Text-font of 'details-page'.
@@ -24,7 +24,9 @@ class expanded_widgets_details_up extends StatelessWidget{
           transparent_divider(),
           expanded_widgets_sub_font_5(),
           transparent_divider(),
-
+          expanded_widgets_sub_font_6(),
+          transparent_divider(),
+          // expanded_widgets_details_down_detail(),
         ],
       )
     );

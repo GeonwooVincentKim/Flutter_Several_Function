@@ -21,3 +21,12 @@ expanded_font_style_contents(){
       color: Colors.black87
   );
 }
+
+// ignore: non_constant_identifier_names
+expanded_font_style_sub_text(){
+  return TextStyle(
+      color: Colors.black26,
+      fontFamily: "icomoon",
+      fontWeight: FontWeight.w100
+  );
+}

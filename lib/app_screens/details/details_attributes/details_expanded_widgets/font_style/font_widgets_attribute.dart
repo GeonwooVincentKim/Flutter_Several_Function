@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/widgets/expanded/divider.dart';
 import 'package:intl/intl.dart';
 import 'dart:ui' as ui;
 
+import './font_style_attributes.dart';
 import 'font_style_attributes.dart';
 
 // Text-font attributes for 'Main-Text' of 'details-page'.
@@ -14,6 +16,9 @@ class expanded_widgets_main_font extends StatelessWidget{
       child: Text(
         "TITLE",
         textDirection: ui.TextDirection.ltr,
+        // Couldn't define the name forms as 'Class'
+        // Because It occurs error that just relating 'parameter'.
+        // So I define as 'function' not 'Class'.
         style: expanded_font_style_main(),
       ),
     );
@@ -34,9 +39,9 @@ class expanded_widgets_sub_font_1 extends StatelessWidget{
               style: expanded_font_style_contents(),
               children: <TextSpan>[
                 TextSpan(text: "Platform: "),
-                TextSpan(text: "PS4", style: TextStyle(color: Colors.black26, fontFamily: "icomoon", fontWeight: FontWeight.w100)),
+                TextSpan(text: "PS4", style: expanded_font_style_sub_text()),
                 TextSpan(text: " | Genre: "),
-                TextSpan(text: "RPG", style: TextStyle(color: Colors.black26, fontFamily: "icomoon", fontWeight: FontWeight.w100)),
+                TextSpan(text: "RPG", style: expanded_font_style_sub_text()),
               ],
             ),
           ),
@@ -59,7 +64,7 @@ class expanded_widgets_sub_font_2 extends StatelessWidget{
               style: expanded_font_style_contents(),
               children: <TextSpan>[
                 TextSpan(text: "Progressions: "),
-                TextSpan(text: "80%", style: TextStyle(color: Colors.black26, fontFamily: "icomoon", fontWeight: FontWeight.w100)),
+                TextSpan(text: "80%", style: expanded_font_style_sub_text()),
               ],
             ),
           ),
@@ -82,7 +87,7 @@ class expanded_widgets_sub_font_3 extends StatelessWidget{
               style: expanded_font_style_contents(),
               children: <TextSpan>[
                 TextSpan(text: "Editor: "),
-                TextSpan(text: "Editor Name", style: TextStyle(color: Colors.black26, fontFamily: "icomoon", fontWeight: FontWeight.w100)),
+                TextSpan(text: "Editor Name", style: expanded_font_style_sub_text()),
               ],
             ),
           ),
@@ -96,6 +101,8 @@ class expanded_widgets_sub_font_3 extends StatelessWidget{
 class expanded_widgets_sub_font_4 extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
+    // To apply 'DateTime' and 'DateFormat', you should import the codes from
+    // 'package:intl/intl.dart'.
     final DateTime now = DateTime.now();
     final DateFormat formatter = DateFormat('yyyy-MM-dd');
     final String formatted = formatter.format(now);
@@ -109,7 +116,7 @@ class expanded_widgets_sub_font_4 extends StatelessWidget{
               style: expanded_font_style_contents(),
               children: <TextSpan>[
                 TextSpan(text: "ReleaseDate: "),
-                TextSpan(text: "${formatted} ", style: TextStyle(color: Colors.black26, fontFamily: "icomoon", fontWeight: FontWeight.w100)),
+                TextSpan(text: "${formatted} ", style: expanded_font_style_sub_text()),
               ],
             ),
           ),
@@ -123,17 +130,67 @@ class expanded_widgets_sub_font_4 extends StatelessWidget{
 class expanded_widgets_sub_font_5 extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
+    // If you apply the 'intl' module, you should type this commands as a code
+    // 'import 'dart:ui' as ui;'
+    // And put 'ui' in front of your 'TextDirection', or 'TextDecoration'.
+    return Column(
+      // Makes Column as Row.
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        // Text(
+        //   "Description: ",
+        //   textDirection: ui.TextDirection.ltr,
+        //   style: expanded_font_style_contents(),
+        // ),
+        RichText(
+          text: TextSpan(
+            style: expanded_font_style_contents(),
+            children: <TextSpan>[
+              TextSpan(text: "Description: "),
+            ],
+          ),
+        ),
+        transparent_divider(),
+        Column(
+          children: <Widget> [
+            RichText(
+              text: TextSpan(
+                style: expanded_font_style_contents(),
+                children: <TextSpan>[
+                  TextSpan(
+                      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget laoreet diam. Fusce vulputate justo tortor, vitae scelerisque elit molestie sit amet. Vestibulum ut purus sapien. Mauris vel sem vel felis ornare mollis. Phasellus luctus massa vitae pulvinar vestibulum. Vivamus tincidunt, mauris sit amet ultrices egestas, magna felis consectetur Add to my listligula, eu dignissim orci odio nec purus. Curabitur a porta tellus, vel efficitur ipsum. Aenean turpis purus, efficitur eget neque eu, placerat blandit ligula. Proin nec neque quam. ",
+                      style: expanded_font_style_sub_text()
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+
+      ],
+    );
+  }
+}
+
+// ignore: camel_case_types
+class expanded_widgets_sub_font_6 extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.centerLeft,
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text(
-            "Description: ",
-            textDirection: ui.TextDirection.ltr,
-            style: expanded_font_style_contents(),
+          RichText(
+            text: TextSpan(
+              style: expanded_font_style_contents(),
+              children: <TextSpan>[
+                TextSpan(text: "Teaser: "),
+              ],
+            ),
           ),
         ],
-      )
+      ),
     );
   }
 }
