@@ -3,6 +3,8 @@ import 'package:flutter_app/widgets/expanded/divider.dart';
 import 'package:flutter_app/widgets/expanded/expanded_widgets.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
+import '../shared/helpers/icomoon.dart';
+
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -67,38 +69,34 @@ class Body extends StatelessWidget{
                         itemCount: listUp.length,
                         itemBuilder: (context, index) {
                           final item = listUp[index];
-                          return Dismissible(
-                            key: Key(item),
-                            onDismissed: (direction) {
-                              // setState(() {
-                              //   listUp.removeAt(index);
-                              // });
-                              Scaffold.of(context).showSnackBar(
-                                SnackBar(content:
-                                  Text("$item dismissed")
-                                )
-                              );
-                            },
-                            background: Container(
-                              alignment: Alignment(-0.9, 0.0),
-                              decoration: ShapeDecoration(
-                                color: Colors.amber,
-                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                          return ClipRRect(
+                              borderRadius: BorderRadius.circular(10.0),
+                              child: Dismissible(
+                                  key: Key(item),
+                                  onDismissed: (direction) {
+                                    // setState(() {
+                                    //   listUp.removeAt(index);
+                                    // });
+                                    Scaffold.of(context).showSnackBar(
+                                        SnackBar(content:
+                                        Text("$item dismissed")
+                                        )
+                                    );
+                                  },
+                                  background: Container(
+                                     color: Colors.amber,
+                                     alignment: Alignment(-0.8, 0.0),
+                                     child: Icon(IconMoon.ipencil, color: Colors.white, size: 30.0,),
+                                  ),
+                                  secondaryBackground: Container(
+                                     color: Colors.green,
+                                     alignment: Alignment(0.9, 0.0),
+                                     child: Icon(IconMoon.icheck2, color: Colors.white, size: 30.0,),
+                                  ),
+                                  child: _buildBodyDetails()
                               ),
-                              child: Icon(IconMoon.ipencil, color: Colors.white, size: 30.0,),
-                            ),
-                            secondaryBackground: Container(
-                              alignment: Alignment(0.9, 0.0),
-                              decoration: ShapeDecoration(
-                                color: Colors.green,
-                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                              ),
-                              child: Icon(IconMoon.icheck2, color: Colors.white, size: 30.0,),
-                            ),
-                            child: _buildBodyDetails()
                           );
                         }
-                        // itemBuilder: (context, index) => _buildBodyDetails()
                     ),
                   ),
                 ]
