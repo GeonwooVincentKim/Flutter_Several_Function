@@ -14,3 +14,11 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+
+# Information of places where you can search..
+
+- [Border-Codes](https://stackoverflow.com/questions/58350235/add-border-to-a-container-with-borderradius-in-flutter)
+- [corder-radius](https://stackoverflow.com/questions/50008737/flutter-corner-radius-with-transparent-background)
+- [single-child-scroll-view](https://stackoverflow.com/questions/56131101/how-to-place-a-listview-inside-a-singlechildscrollview-but-prevent-them-from-scr)
+- [scrollable-row-list-view](https://stackoverflow.com/questions/50762079/flutter-listview-scrollable-row)
