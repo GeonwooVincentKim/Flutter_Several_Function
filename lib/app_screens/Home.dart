@@ -80,12 +80,20 @@ class Body extends StatelessWidget{
                               );
                             },
                             background: Container(
-                              color: Colors.green,
-                              child: Icon(Icons.check),
+                              alignment: Alignment(-0.9, 0.0),
+                              decoration: ShapeDecoration(
+                                color: Colors.amber,
+                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                              ),
+                              child: Icon(IconMoon.ipencil, color: Colors.white, size: 30.0,),
                             ),
                             secondaryBackground: Container(
-                              color: Colors.red,
-                              child: Icon(Icons.cancel),
+                              alignment: Alignment(0.9, 0.0),
+                              decoration: ShapeDecoration(
+                                color: Colors.green,
+                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                              ),
+                              child: Icon(IconMoon.icheck2, color: Colors.white, size: 30.0,),
                             ),
                             child: _buildBodyDetails()
                           );
