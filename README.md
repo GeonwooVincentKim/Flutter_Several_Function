@@ -22,3 +22,7 @@ samples, guidance on mobile development, and a full API reference.
 - [corder-radius](https://stackoverflow.com/questions/50008737/flutter-corner-radius-with-transparent-background)
 - [single-child-scroll-view](https://stackoverflow.com/questions/56131101/how-to-place-a-listview-inside-a-singlechildscrollview-but-prevent-them-from-scr)
 - [scrollable-row-list-view](https://stackoverflow.com/questions/50762079/flutter-listview-scrollable-row)
+- [Clipping-Dismissible](https://github.com/flutter/flutter/issues/56812)
+- [Dismissible-Widget-Border](https://stackoverflow.com/questions/57542470/how-to-fix-this-dismissible-widget-border)
+- [Dismissible-ListView](https://medium.com/@maffan/how-to-make-a-dismissible-listview-in-flutter-a9f730a751be)
+
