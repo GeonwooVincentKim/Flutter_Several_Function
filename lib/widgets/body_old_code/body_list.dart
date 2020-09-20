@@ -32,9 +32,9 @@ class Body extends StatelessWidget{
             ),
             divider(),
             // Import buttons that combined Image and Text.
-            Body_Details(),
+            // Body_Details(),
             SizedBox(height: 15),
-            Body_Details(),
+            // Body_Details(),
             SizedBox(height: 50),
             Row(
               children: <Widget>[
@@ -43,13 +43,13 @@ class Body extends StatelessWidget{
               ],
             ),
             divider(),
-            Body_Details(),
+            // Body_Details(),
             SizedBox(height: 15),
-            Body_Details(),
+            // Body_Details(),
             SizedBox(height: 15),
-            Body_Details(),
+            // Body_Details(),
             SizedBox(height: 15),
-            Body_Details(),
+            // Body_Details(),
           ],
         ),
       ),
@@ -117,7 +117,7 @@ class New_Body extends StatelessWidget{
   }
 
   Widget _buildBodyDetails(){
-    return Body_Details();
+    // return Body_Details();
   }
 }
 
@@ -183,6 +183,6 @@ class Body_Expanded extends StatelessWidget{
     );
   }
   Widget _buildBodyDetails(){
-    return Body_Details();
+    // return Body_Details();
   }
 }
