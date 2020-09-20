@@ -27,17 +27,9 @@ class Home extends StatelessWidget {
 class Body extends StatelessWidget{
   @override
   Widget build(BuildContext context){
-    var itemList = [
-      "IN_PROGRESS", "Line", "Title1", "Title2", "Title3",
-      "COMPLETED", "Title4", "Title5", "Title6",
-    ];
     var listUp = ["Title1", "Title2", "Title3"];
     var listDown = ["Title4", "Title5", "Title6", "Title7"];
-    // var list_down = ["Title4", "Title5", "Title6", "Title7", "Title8", "Title9", "Title10", "Title10", "Title10", ];
 
-
-    // return LayoutBuilder(
-    //   builder: (context, constraint) {
     return Center(
       child: Container(
         padding: EdgeInsets.only(left: 10.0, top: 20.0),
@@ -67,34 +59,39 @@ class Body extends StatelessWidget{
                         separatorBuilder: (context, index) =>
                             transparent_divider(),
                         itemCount: listUp.length,
+                        // itemBuilder: (context, index) => _buildBodyDetails(),
                         itemBuilder: (context, index) {
                           final item = listUp[index];
                           return ClipRRect(
                               borderRadius: BorderRadius.circular(10.0),
-                              child: Dismissible(
-                                  key: Key(item),
-                                  onDismissed: (direction) {
-                                    // setState(() {
-                                    //   listUp.removeAt(index);
-                                    // });
-                                    Scaffold.of(context).showSnackBar(
-                                        SnackBar(content:
-                                        Text("$item dismissed")
-                                        )
-                                    );
-                                  },
-                                  background: Container(
-                                     color: Colors.amber,
-                                     alignment: Alignment(-0.8, 0.0),
-                                     child: Icon(IconMoon.ipencil, color: Colors.white, size: 30.0,),
-                                  ),
-                                  secondaryBackground: Container(
-                                     color: Colors.green,
-                                     alignment: Alignment(0.9, 0.0),
-                                     child: Icon(IconMoon.icheck2, color: Colors.white, size: 30.0,),
-                                  ),
-                                  child: _buildBodyDetails()
+                              child: Container(
+                                height: 67,
+                                child: Dismissible(
+                                    key: Key(item),
+                                    onDismissed: (direction) {
+                                      // setState(() {
+                                      //   listUp.removeAt(index);
+                                      // });
+                                      Scaffold.of(context).showSnackBar(
+                                          SnackBar(content:
+                                          Text("$item dismissed")
+                                          )
+                                      );
+                                    },
+                                    background: Container(
+                                      color: Colors.amber,
+                                      alignment: Alignment(-0.8, 0.0),
+                                      child: Icon(IconMoon.ipencil, color: Colors.white, size: 30.0,),
+                                    ),
+                                    secondaryBackground: Container(
+                                      color: Colors.green,
+                                      alignment: Alignment(0.9, 0.0),
+                                      child: Icon(IconMoon.icheck2, color: Colors.white, size: 30.0,),
+                                    ),
+                                    child: _buildBodyTopDetails()
+                                ),
                               ),
+
                           );
                         }
                     ),
@@ -124,7 +121,7 @@ class Body extends StatelessWidget{
                           ),
                         shrinkWrap: true,
                         itemCount: listDown.length,
-                        itemBuilder: (context, index) => _buildBodyDetails()
+                        itemBuilder: (context, index) => _buildBodyBottomDetails()
                     ),
                   ),
                 ]
@@ -143,13 +140,17 @@ class Body extends StatelessWidget{
     // );
   }
 
-  Widget _buildBodyDetails(){
-    return Body_Details();
+  Widget _buildBodyTopDetails(){
+    return Body_Details_Top();
+  }
+
+  Widget _buildBodyBottomDetails(){
+    return Body_Details_Below();
   }
 }
 
 // ignore: camel_case_types
-class Body_Details extends StatelessWidget{
+class Body_Details_Top extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -163,16 +164,46 @@ class Body_Details extends StatelessWidget{
             Expanded(
                 flex: 1,
                 // For Top-part Widgets, the Main
-                child: expanded_widgets_up_detail()
+                child: expanded_widgets_front_detail()
             ),
 
             Expanded(
                 flex: 3,
                 // For Below-part Widgets, the Main
-                child: expanded_widgets_down_detail()
+                child: expanded_widgets_behind_detail()
             )
           ],
         ),
+    );
+  }
+}
+
+
+// ignore: camel_case_types
+class Body_Details_Below extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      // padding: EdgeInsets.only(left: 9.0),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10.0),
+      ),
+      height: 70,
+      child: Row(
+        children: [
+          Expanded(
+              flex: 1,
+              // For Top-part Widgets, the Main
+              child: expanded_widgets_left_detail()
+          ),
+
+          Expanded(
+              flex: 3,
+              // For Below-part Widgets, the Main
+              child: expanded_widgets_right_detail()
+          )
+        ],
+      ),
     );
   }
 }
