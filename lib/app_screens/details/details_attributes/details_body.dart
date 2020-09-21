@@ -21,6 +21,7 @@ class DetailBody extends StatelessWidget{
   Widget build(BuildContext context) {
     return Center(
       child: Container(
+        padding: EdgeInsets.only(left: 10.0, top: 20.0, right: 10.0),
         alignment: Alignment.topLeft,
         color: Colors.white,
         child: SingleChildScrollView(

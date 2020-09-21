@@ -30,6 +30,7 @@ class DetailsBodyProgressBar extends StatelessWidget{
         LinearProgressIndicator(
           minHeight: 10,
           backgroundColor: Colors.grey,
+          value: 0.8,
         ),
       ],
     );
@@ -42,7 +43,7 @@ class DetailBodyText extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Container(
-        padding: EdgeInsets.only(left: 10.0, top: 20.0),
+        // padding: EdgeInsets.only(left: 10.0, top: 20.0),
         child: Column(
           children: <Widget>[
             Row(
