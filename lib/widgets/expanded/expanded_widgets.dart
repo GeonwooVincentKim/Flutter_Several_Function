@@ -90,6 +90,7 @@ class expanded_widgets_behind_detail extends StatelessWidget{
       ),
       child: expanded_widgets_align_text(),
     );
+
   }
 }
 

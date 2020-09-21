@@ -57,7 +57,7 @@ class DetailBodyText extends StatelessWidget{
   }
 }
 
-//
+// Video-Attributes that is belows in the Detail-Page part.
 class DetailBodyVideo extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
