@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/widgets/expanded/divider.dart';
 import 'package:flutter_app/widgets/expanded/expanded_widgets.dart';
 
-import 'discover_expanded_widgets/expanded_widgets_discover.dart';
+import '../../../widgets/expanded/widgets_attribute/discover_expanded_widgets/expanded_widgets_discover.dart';
 
 class DiscoverPage extends StatelessWidget{
   @override

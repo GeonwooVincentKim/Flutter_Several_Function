@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/app_screens/details/details_attributes/details_expanded_widgets/entertainment/video_attributes.dart';
+import 'file:///E:/flutter_test_project/flutter_app/lib/widgets/expanded/widgets_attribute/details_expanded_widgets/entertainment/video_attributes.dart';
 import 'package:flutter_app/widgets/expanded/divider.dart';
 
 import 'font_style/font_widgets_attribute.dart';

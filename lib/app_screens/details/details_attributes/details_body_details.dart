@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'details_expanded_widgets/expanded_widgets_details.dart';
+import '../../../widgets/expanded/widgets_attribute/details_expanded_widgets/expanded_widgets_details.dart';
 
 // Image-Attributes that is below in the Detail-Page part.
 class DetailBodyImage extends StatelessWidget{

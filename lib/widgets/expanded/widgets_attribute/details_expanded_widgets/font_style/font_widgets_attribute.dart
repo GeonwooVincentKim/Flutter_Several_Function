@@ -3,7 +3,6 @@ import 'package:flutter_app/widgets/expanded/divider.dart';
 import 'package:intl/intl.dart';
 import 'dart:ui' as ui;
 
-import './font_style_attributes.dart';
 import 'font_style_attributes.dart';
 
 // Text-font attributes for 'Main-Text' of 'details-page'.
