@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'discover_attributes/discover_body.dart';
+import 'settings_attribute/settings_body.dart';
 
 // ignore: non_constant_identifier_names
-void discover_main(){
+void settings_main(){
   runApp(
     MaterialApp(
       title: "My Flutter App",
-      home: DiscoverPage(),
-    )
+      home: SettingsPage(),
+    ),
   );
 }

@@ -1,22 +1,49 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/app_screens/settings/settings.dart';
 import 'package:flutter_app/widgets/expanded/divider.dart';
 import 'package:flutter_app/widgets/expanded/expanded_widgets.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_app/widgets/expanded/body_details.dart';
 
+import '../main.dart';
 import '../shared/helpers/icomoon.dart';
 
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            DrawerHeader(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(""),
+                  fit: BoxFit.cover
+                ),
+              ),
+              child: Text("Header"),
+            ),
+            ListTile(
+              title: Text("Home-Page"),
+              onTap: (){
+                main();
+              },
+              // title: Text("Home"),
+            ),
+            ListTile(
+              title: Text("Settings"),
+              onTap: (){
+                settings_main();
+              },
+            ),
+          ],
+        ),
+      ),
       appBar: AppBar(
         backgroundColor: Colors.black87,
-        title: Center(
-          child: Text(
-            "MY GAMES",
-          ),
-        ),
+        title: Text("MY GAMES"),
+        centerTitle: true,
       ),
       body: Body(),
       // body: Body_Divide_Test(),
