@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 // ignore: camel_case_types
-class expanded_widgets_align_text extends StatelessWidget{
+class WidgetTextAlign extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -51,7 +51,7 @@ class expanded_widgets_align_text extends StatelessWidget{
 }
 
 // ignore: non_constant_identifier_names
-expanded_widgets_text_style(){
+WidgetTextStyle(){
   return TextStyle(
       decoration: TextDecoration.none,
       fontSize: 25.0,

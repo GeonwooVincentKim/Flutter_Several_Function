@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'widgets_attribute/main_expanded_widgets/expanded_widgets_detail.dart';
+import 'package:flutter_app/widgets/expanded/widgets_attribute/Main/widget_detail.dart';
 
 /*
   Text-Attributes for Main
@@ -13,8 +13,7 @@ class expanded_widgets_up extends StatelessWidget{
     return Expanded(
       child: Text(
         "IN PROGRESS",
-        textDirection: TextDirection.ltr,
-        style: expanded_widgets_text_style(),
+        style: WidgetTextStyle(),
       ),
     );
   }
@@ -28,8 +27,7 @@ class expanded_widgets_down extends StatelessWidget{
     return Expanded(
       child: Text(
         "COMPLETED",
-        textDirection: TextDirection.ltr,
-        style: expanded_widgets_text_style(),
+        style: WidgetTextStyle(),
       ),
     );
   }
@@ -52,7 +50,8 @@ class expanded_widgets_left_detail extends StatelessWidget{
           bottomLeft: Radius.circular(10.0),
         ),
         child: Image(
-            image: NetworkImage("https://www.gstatic.com/webp/gallery/1.jpg")
+          image: NetworkImage("https://www.gstatic.com/webp/gallery/1.jpg"),
+          fit: BoxFit.fitHeight
         ),
       ),
     );
@@ -67,7 +66,8 @@ class expanded_widgets_front_detail extends StatelessWidget{
     return Container(
       child: ClipRRect(
         child: Image(
-            image: NetworkImage("https://www.gstatic.com/webp/gallery/1.jpg")
+          image: NetworkImage("https://www.gstatic.com/webp/gallery/1.jpg"),
+          fit: BoxFit.fitHeight
         ),
       ),
     );
@@ -79,12 +79,11 @@ class expanded_widgets_behind_detail extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 67,
       padding: EdgeInsets.only(left: 10.0, top: 5.0),
       decoration: BoxDecoration(
         color: Colors.black12,
       ),
-      child: expanded_widgets_align_text(),
+      child: WidgetTextAlign(),
     );
 
   }
@@ -103,7 +102,7 @@ class expanded_widgets_right_detail extends StatelessWidget{
             bottomRight: Radius.circular(10.0)),
         color: Colors.black12,
       ),
-      child: expanded_widgets_align_text(),
+      child: WidgetTextAlign(),
     );
   }
 }

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/app_screens/settings/settings.dart';
+import 'package:flutter_app/main.dart';
+import 'package:flutter_app/shared/helpers/icomoon.dart';
 import 'package:flutter_app/widgets/expanded/divider.dart';
 import 'package:flutter_app/widgets/expanded/expanded_widgets.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_app/widgets/expanded/body_details.dart';
 
-import '../main.dart';
-import '../shared/helpers/icomoon.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -18,7 +18,7 @@ class Home extends StatelessWidget {
             DrawerHeader(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(""),
+                  image: AssetImage("assets/images/1.jpg"),
                   fit: BoxFit.cover
                 ),
               ),
@@ -116,7 +116,7 @@ class Body extends StatelessWidget{
                                       alignment: Alignment(0.9, 0.0),
                                       child: Icon(IconMoon.icheck2, color: Colors.white, size: 30.0,),
                                     ),
-                                    child: _buildBodyTopDetails()
+                                    child: listview_separated_up()
                                 ),
                               ),
 
@@ -149,7 +149,7 @@ class Body extends StatelessWidget{
                           ),
                         shrinkWrap: true,
                         itemCount: listDown.length,
-                        itemBuilder: (context, index) => _buildBodyBottomDetails()
+                        itemBuilder: (context, index) => listview_separated_down()
                     ),
                   ),
                 ]
@@ -166,30 +166,5 @@ class Body extends StatelessWidget{
     );
     //   },
     // );
-  }
-
-  Widget _buildBodyTopDetails(){
-    return Body_Details_Top();
-  }
-
-  Widget _buildBodyBottomDetails(){
-    return Body_Details_Below();
-  }
-}
-
-// ignore: camel_case_types
-class Body_Details_Top extends StatelessWidget{
-  @override
-  Widget build(BuildContext context) {
-    return listview_separated_up();
-  }
-}
-
-
-// ignore: camel_case_types
-class Body_Details_Below extends StatelessWidget{
-  @override
-  Widget build(BuildContext context) {
-    return listview_separated_down();
   }
 }

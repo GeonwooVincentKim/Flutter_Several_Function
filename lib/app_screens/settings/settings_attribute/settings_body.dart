@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-
-import '../../../main.dart';
-import '../settings.dart';
+import 'package:flutter_app/app_screens/settings/settings.dart';
+import 'package:flutter_app/main.dart';
+import 'settings_body_details.dart';
 
 class SettingsPage extends StatelessWidget{
   @override
@@ -13,7 +13,7 @@ class SettingsPage extends StatelessWidget{
             DrawerHeader(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage(""),
+                    image: AssetImage("assets/images/1.jpg"),
                     fit: BoxFit.cover
                 ),
               ),
@@ -57,15 +57,11 @@ class SettingsBody extends StatelessWidget{
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              // _buildDetailsBodyImage(),
-
-              // I should convert as CircularProgressIndicator function.
-              // _buildDetailsBodyProgressBar(),
               Center(
-                // child: _buildDetailBodyText(),
+                child: _buildSettingBodyImage(),
               ),
               Center(
-                // child: _buildDetailBodyVideo(),
+                child: _buildSettingBodyText(),
               ),
             ],
           ),
@@ -73,5 +69,14 @@ class SettingsBody extends StatelessWidget{
 
       ),
     );
+  }
+
+  Widget _buildSettingBodyImage(){
+    // return SettingBodyText();
+    return Text("You're World");
+  }
+
+  Widget _buildSettingBodyText(){
+    return Text("You're World");
   }
 }

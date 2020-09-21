@@ -7,7 +7,6 @@ basic_widgets_form(){
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10.0),
       ),
-      height: 70,
       child:Row(
         children: [
           Expanded(

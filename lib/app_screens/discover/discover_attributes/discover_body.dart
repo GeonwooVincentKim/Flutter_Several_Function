@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/widgets/expanded/divider.dart';
-import 'package:flutter_app/widgets/expanded/expanded_widgets.dart';
-
-import '../../../widgets/expanded/widgets_attribute/discover_expanded_widgets/expanded_widgets_discover.dart';
+import 'package:flutter_app/widgets/expanded/widgets_attribute/Discover/widget_discover.dart';
 
 class DiscoverPage extends StatelessWidget{
   @override
@@ -10,9 +8,8 @@ class DiscoverPage extends StatelessWidget{
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black87,
-        title: Center(
-          child: Text("DISCOVER"),
-        ),
+        title: Text("DISCOVER"),
+        centerTitle: true,
       ),
       body: DiscoverBody(),
     );
@@ -39,17 +36,13 @@ class DiscoverBody extends StatelessWidget{
                     separatorBuilder: (context, index) =>
                         transparent_divider(),
                     itemCount: itemList.length,
-                    itemBuilder: (context, index) => _buildDiscoverBodyDetails()
+                    itemBuilder: (context, index) => DiscoverBodyDetails()
                   )
               ),
             ]
         ),
       ),
     );
-  }
-
-  Widget _buildDiscoverBodyDetails(){
-    return DiscoverBodyDetails();
   }
 }
 
@@ -66,11 +59,11 @@ class DiscoverBodyDetails extends StatelessWidget{
         children: [
           Expanded(
             flex: 3,
-            child: expanded_widgets_discover_up_detail(),
+            child: DiscoverUp(),
           ),
           Expanded(
             flex: 1,
-            child: expanded_widgets_discover_down_detail(),
+            child: DiscoverDown(),
           ),
         ],
       ),

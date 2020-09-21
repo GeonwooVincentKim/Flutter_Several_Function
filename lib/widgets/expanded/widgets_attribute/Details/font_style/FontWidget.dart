@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/widgets/expanded/divider.dart';
 import 'package:intl/intl.dart';
 import 'dart:ui' as ui;
 
-import 'font_style_attributes.dart';
+import '../../../divider.dart';
+import 'FontStyle.dart';
 
 // Text-font attributes for 'Main-Text' of 'details-page'.
 // ignore: camel_case_types
-class expanded_widgets_main_font extends StatelessWidget{
+class MainFont extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Align(
@@ -26,7 +26,7 @@ class expanded_widgets_main_font extends StatelessWidget{
 
 // Text-font attributes for 'Sub-Text' of 'details-page'.
 // ignore: cameL_case_types
-class expanded_widgets_sub_font_1 extends StatelessWidget{
+class SubFont1 extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Align(
@@ -51,7 +51,7 @@ class expanded_widgets_sub_font_1 extends StatelessWidget{
 }
 
 // ignore: camel_case_types
-class expanded_widgets_sub_font_2 extends StatelessWidget{
+class SubFont2 extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Align(
@@ -74,30 +74,31 @@ class expanded_widgets_sub_font_2 extends StatelessWidget{
 }
 
 // ignore: camel_case_types
-class expanded_widgets_sub_font_3 extends StatelessWidget{
+class SubFont3 extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.centerLeft,
-      child: Row(
-        children: <Widget>[
-          RichText(
-            text: TextSpan(
-              style: expanded_font_style_contents(),
-              children: <TextSpan>[
-                TextSpan(text: "Editor: "),
-                TextSpan(text: "Editor Name", style: expanded_font_style_sub_text()),
-              ],
-            ),
-          ),
-        ],
+      child: RichText(
+        text: TextSpan(
+          style: expanded_font_style_contents(),
+          children: <TextSpan>[
+            TextSpan(text: "Editor: "),
+            TextSpan(text: "Editor Name", style: expanded_font_style_sub_text()),
+          ],
+        ),
       ),
+      // child: Row(
+      //   children: <Widget>[
+      //
+      //   ],
+      // ),
     );
   }
 }
 
 // ignore: camel_case_types
-class expanded_widgets_sub_font_4 extends StatelessWidget{
+class SubFont4 extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     // To apply 'DateTime' and 'DateFormat', you should import the codes from
@@ -108,25 +109,26 @@ class expanded_widgets_sub_font_4 extends StatelessWidget{
 
     return Align(
       alignment: Alignment.centerLeft,
-      child: Row(
-        children: <Widget>[
-          RichText(
-            text: TextSpan(
-              style: expanded_font_style_contents(),
-              children: <TextSpan>[
-                TextSpan(text: "ReleaseDate: "),
-                TextSpan(text: "${formatted} ", style: expanded_font_style_sub_text()),
-              ],
-            ),
-          ),
-        ],
+      child: RichText(
+        text: TextSpan(
+          style: expanded_font_style_contents(),
+          children: <TextSpan>[
+            TextSpan(text: "ReleaseDate: "),
+            TextSpan(text: "${formatted} ", style: expanded_font_style_sub_text()),
+          ],
+        ),
       ),
+      // child: Row(
+      //   children: <Widget>[
+      //
+      //   ],
+      // ),
     );
   }
 }
 
 // ignore: camel_case_types
-class expanded_widgets_sub_font_5 extends StatelessWidget{
+class SubFont5 extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     // If you apply the 'intl' module, you should type this commands as a code
@@ -172,7 +174,7 @@ class expanded_widgets_sub_font_5 extends StatelessWidget{
 }
 
 // ignore: camel_case_types
-class expanded_widgets_sub_font_6 extends StatelessWidget{
+class SubFont6 extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Align(

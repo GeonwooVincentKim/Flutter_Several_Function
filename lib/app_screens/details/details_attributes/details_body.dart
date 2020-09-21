@@ -7,11 +7,8 @@ class DetailPage extends StatelessWidget{
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black87,
-        title: Center(
-          child: Text(
-            "GAME TITLE",
-          ),
-        ),
+        title: Text("GAME TITLE"),
+        centerTitle: true,
       ),
       body: DetailBody(),
     );
@@ -29,15 +26,15 @@ class DetailBody extends StatelessWidget{
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              _buildDetailsBodyImage(),
+              DetailBodyImage(),
 
               // I should convert as CircularProgressIndicator function.
-              _buildDetailsBodyProgressBar(),
+              DetailsBodyProgressBar(),
               Center(
-                child: _buildDetailBodyText(),
+                child: DetailBodyText(),
               ),
               Center(
-                child: _buildDetailBodyVideo(),
+                child: DetailBodyVideo(),
               ),
             ],
           ),
@@ -45,22 +42,6 @@ class DetailBody extends StatelessWidget{
 
       ),
     );
-  }
-
-  Widget _buildDetailsBodyImage(){
-    return DetailBodyImage();
-  }
-
-  Widget _buildDetailsBodyProgressBar(){
-    return DetailsBodyProgressBar();
-  }
-
-  Widget _buildDetailBodyText(){
-    return DetailBodyText();
-  }
-
-  Widget _buildDetailBodyVideo(){
-    return DetailBodyVideo();
   }
 }
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 // ignore: camel_case_types
-class expanded_widgets_discover_up_detail extends StatelessWidget{
+class DiscoverUp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -28,7 +28,7 @@ class expanded_widgets_discover_up_detail extends StatelessWidget{
 
 
 // ignore: camel_case_types
-class expanded_widgets_discover_down_detail extends StatelessWidget{
+class DiscoverDown extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -41,39 +41,29 @@ class expanded_widgets_discover_down_detail extends StatelessWidget{
           bottomRight: Radius.circular(10.0)),
         color: Colors.black12,
       ),
-      child: (Column(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          Column(
-            children: <Widget>[
-              Align(
-                alignment: Alignment.center,
-                // padding: EdgeInsets.only(left: 10.0),
-                child: Text(
-                  'TITLE OF THE GAME',
-                  textScaleFactor: 2,
-                  textDirection: TextDirection.ltr,
-                  textAlign: TextAlign.left,
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontFamily: "icomoon",
-                    fontSize: 10,
-                  ),
-                ),
-              ),
-              Align(
-                alignment: Alignment.center,
-                child: Text(
-                  "Platform: PS4 | Genre : RPG",
-                  style: TextStyle(
-                    color: Colors.black26,
-                    fontFamily: "icomoon",
-                  ),
-                ),
-              ),
-            ],
+          Text(
+            'TITLE OF THE GAME',
+            textScaleFactor: 2,
+            textDirection: TextDirection.ltr,
+            textAlign: TextAlign.left,
+            style: TextStyle(
+              color: Colors.black,
+              fontFamily: "icomoon",
+              fontSize: 10,
+            ),
+          ),
+          Text(
+            "Platform: PS4 | Genre : RPG",
+            style: TextStyle(
+              color: Colors.black26,
+              fontFamily: "icomoon",
+            ),
           ),
         ],
-      )),
+      ),
     );
   }
 

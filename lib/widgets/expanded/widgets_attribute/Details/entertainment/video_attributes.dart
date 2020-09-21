@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
 // ignore: camel_case_types
-class expanded_video_player extends StatefulWidget{
+class Video extends StatefulWidget{
   @override
-  _expanded_video_player_state createState() => _expanded_video_player_state();
+  _Video_state createState() => _Video_state();
 }
 
 // ignore: cameL_case_types
-class _expanded_video_player_state extends State<expanded_video_player> {
+class _Video_state extends State<Video> {
   VideoPlayerController _controller;
 
   @override

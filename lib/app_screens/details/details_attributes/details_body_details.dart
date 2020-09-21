@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/widgets/expanded/widgets_attribute/Details/widget_details.dart';
 
-import '../../../widgets/expanded/widgets_attribute/details_expanded_widgets/expanded_widgets_details.dart';
 
 // Image-Attributes that is below in the Detail-Page part.
 class DetailBodyImage extends StatelessWidget{
@@ -11,7 +11,7 @@ class DetailBodyImage extends StatelessWidget{
       child: Column(
           children: <Widget>[
             Expanded(
-              child: expanded_widgets_details_up_detail(),
+              child: DetailsImage(),
             ),
           ]
       ),
@@ -48,7 +48,7 @@ class DetailBodyText extends StatelessWidget{
             Row(
               children: <Widget>[
                 // Title
-                expanded_widgets_details_up(),
+                DetailsText(),
               ],
             ),
           ],
@@ -65,7 +65,7 @@ class DetailBodyVideo extends StatelessWidget{
       padding: EdgeInsets.only(left: 10.0, top: 15.0),
       child: Column(
         children: <Widget>[
-          expanded_widgets_details_down_detail(),
+          DetailsVideo(),
         ]
       ),
     );
