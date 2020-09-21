@@ -81,7 +81,7 @@ class Body extends StatelessWidget{
                                     },
                                     background: Container(
                                       color: Colors.amber,
-                                      alignment: Alignment(-0.8, 0.0),
+                                      alignment: Alignment(-0.9, 0.0),
                                       child: Icon(IconMoon.ipencil, color: Colors.white, size: 30.0,),
                                     ),
                                     secondaryBackground: Container(
