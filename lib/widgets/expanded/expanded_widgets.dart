@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-
-import '../../app_screens/Home.dart';
-import '../../shared/helpers/icomoon.dart';
-import 'divider.dart';
 import 'widgets_attribute/main_expanded_widgets/expanded_widgets_detail.dart';
 
 /*
