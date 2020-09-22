@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/app_screens/Home.dart';
+import 'package:flutter_app/widgets/expanded/divider.dart';
+import 'package:flutter_app/widgets/expanded/expanded_widgets.dart';
 
-import '../expanded/divider.dart';
-import '../expanded/expanded_widgets.dart';
 
 
 var itemList = [

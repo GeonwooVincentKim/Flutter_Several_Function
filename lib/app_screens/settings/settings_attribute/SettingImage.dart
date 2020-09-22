@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-// Text-Attributes that is belows in the Detail-Page part.
-class SettingBodyText extends StatelessWidget{
+// Image-Attributes that is belows in the Detail-Page part.
+class SettingImage extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Container(
