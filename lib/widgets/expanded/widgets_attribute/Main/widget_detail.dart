@@ -10,7 +10,6 @@ class WidgetTextAlign extends StatelessWidget{
           children: <Widget>[
             Align(
               alignment: Alignment.centerLeft,
-              // padding: EdgeInsets.only(left: 10.0),
               child: Text(
                 'Title',
                 textScaleFactor: 2,

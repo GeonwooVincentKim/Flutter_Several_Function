@@ -79,11 +79,13 @@ class expanded_widgets_behind_detail extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 10.0, top: 5.0),
       decoration: BoxDecoration(
         color: Colors.black12,
       ),
-      child: WidgetTextAlign(),
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+        child: WidgetTextAlign(),
+      ),
     );
 
   }

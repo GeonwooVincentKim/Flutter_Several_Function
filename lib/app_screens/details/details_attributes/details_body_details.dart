@@ -3,7 +3,7 @@ import 'package:flutter_app/widgets/expanded/widgets_attribute/Details/widget_de
 
 
 // Image-Attributes that is below in the Detail-Page part.
-class DetailBodyImage extends StatelessWidget{
+class ImageAttribute extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Container(
@@ -20,7 +20,7 @@ class DetailBodyImage extends StatelessWidget{
 }
 
 // Progress-Bar-Attributes that is belows in the Detail-Page part.
-class DetailsBodyProgressBar extends StatelessWidget{
+class ProgressBar extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -39,7 +39,7 @@ class DetailsBodyProgressBar extends StatelessWidget{
 }
 
 // Text-Attributes that is belows in the Detail-Page part.
-class DetailBodyText extends StatelessWidget{
+class TextAttribute extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Container(
@@ -59,7 +59,7 @@ class DetailBodyText extends StatelessWidget{
 }
 
 // Video-Attributes that is belows in the Detail-Page part.
-class DetailBodyVideo extends StatelessWidget{
+class Video extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(

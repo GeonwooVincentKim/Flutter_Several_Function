@@ -27,15 +27,15 @@ class DetailBody extends StatelessWidget{
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              DetailBodyImage(),
+              ImageAttribute(),
 
               // I should convert as CircularProgressIndicator function.
-              DetailsBodyProgressBar(),
+              ProgressBar(),
               Center(
-                child: DetailBodyText(),
+                child: TextAttribute(),
               ),
               Center(
-                child: DetailBodyVideo(),
+                child: Video(),
               ),
             ],
           ),

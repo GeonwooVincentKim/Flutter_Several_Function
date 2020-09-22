@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/app_screens/settings/settings.dart';
 import 'package:flutter_app/main.dart';
-import 'settings_body_details.dart';
+import 'settings.dart';
 
 class SettingsPage extends StatelessWidget{
   @override
@@ -16,8 +16,7 @@ class SettingsPage extends StatelessWidget{
                     image: AssetImage("assets/images/1.jpg"),
                     fit: BoxFit.cover
                 ),
-              ),
-              child: Text("Header"),
+              ), child: null,
             ),
             ListTile(
               title: Text("Home-Page"),

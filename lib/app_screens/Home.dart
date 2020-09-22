@@ -21,8 +21,7 @@ class Home extends StatelessWidget {
                   image: AssetImage("assets/images/1.jpg"),
                   fit: BoxFit.cover
                 ),
-              ),
-              child: Text("Header"),
+              ), child: null,
             ),
             ListTile(
               title: Text("Home-Page"),

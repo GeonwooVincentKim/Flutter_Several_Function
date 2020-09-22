@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'settings_attribute/settings_body.dart';
+import 'settings_attribute/SideMenu.dart';
 
 // ignore: non_constant_identifier_names
 void settings_main(){
