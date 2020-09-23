@@ -113,7 +113,7 @@ class _HomeState extends State<Home>{
         case 0: {
           //Navigator.pushNamed(context, '/home');
           // onAddButtonTapped(1);
-          _title="MY GAMES";
+          _title="SETTINGS";
           break;
         }
         case 1:{

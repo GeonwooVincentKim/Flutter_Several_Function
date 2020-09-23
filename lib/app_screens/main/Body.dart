@@ -48,7 +48,7 @@ class _BodyState extends State<Body>{
                 // For the codes that belows 'IN PROGRESS'.
                 Row(
                   children: <Widget>[
-                    MainList()
+                    InProcessList()
                   ]
                 ),
 
@@ -65,18 +65,7 @@ class _BodyState extends State<Body>{
                 // For the codes that belows 'COMPILED'.
                 Row(
                   children: <Widget>[
-                    Expanded(
-                      child: ListView.separated(
-                        shrinkWrap: true,
-                        physics: NeverScrollableScrollPhysics(),
-                        separatorBuilder: (context, index) =>
-                        new Divider(
-                          color: Colors.transparent,
-                        ),
-                        itemCount: listDown.length,
-                        itemBuilder: (context, index) => listview_separated_down()
-                      ),
-                    ),
+                    CompletedList(),
                   ]
                 ),
 

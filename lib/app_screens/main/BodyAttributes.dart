@@ -4,7 +4,7 @@ import 'package:flutter_app/widgets/expanded/body_details.dart';
 import 'package:flutter_app/widgets/expanded/divider.dart';
 
 // ignore: non_constant_identifier_names
-class MainList extends StatelessWidget{
+class InProcessList extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     var listUp = ["Title1", "Title2", "Title3"];
@@ -49,6 +49,25 @@ class MainList extends StatelessWidget{
 
             );
           }
+      ),
+    );
+  }
+}
+
+class CompletedList extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    var listDown = ["Title4", "Title5", "Title6", "Title7"];
+    return Expanded(
+      child: ListView.separated(
+          shrinkWrap: true,
+          physics: NeverScrollableScrollPhysics(),
+          separatorBuilder: (context, index) =>
+          new Divider(
+            color: Colors.transparent,
+          ),
+          itemCount: listDown.length,
+          itemBuilder: (context, index) => listview_separated_down()
       ),
     );
   }
