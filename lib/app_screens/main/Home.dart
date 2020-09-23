@@ -67,27 +67,6 @@ class _HomeState extends State<Home>{
     });
   }
 
-  void bottomTapped(int index){
-    setState((){
-      _selectedPage = index;
-      pageController.animateToPage(index, duration: Duration(milliseconds: 700), curve: Curves.ease);
-      switch(index){
-        case 0: {
-          //Navigator.pushNamed(context, '/home');
-          // onAddButtonTapped(1);
-          _title="MY GAMES";
-          break;
-        }
-        case 1:{
-          // Navigator.pushNamed(context, '/discover');
-          // onAddButtonTapped(1);
-          _title="DISCOVER";
-          break;
-        }
-      }
-    });
-  }
-
   void onAddButtonTapped(int index){
     pageController.animateToPage(index);
     pageController.jumpToPage(index);
@@ -123,5 +102,26 @@ class _HomeState extends State<Home>{
       ),
       // body: Body_Divide_Test(),
     );
+  }
+
+  void bottomTapped(int index){
+    setState((){
+      _selectedPage = index;
+      pageController.animateToPage(index, duration: Duration(milliseconds: 700), curve: Curves.ease);
+      switch(index){
+        case 0: {
+          //Navigator.pushNamed(context, '/home');
+          // onAddButtonTapped(1);
+          _title="MY GAMES";
+          break;
+        }
+        case 1:{
+          // Navigator.pushNamed(context, '/discover');
+          // onAddButtonTapped(1);
+          _title="DISCOVER";
+          break;
+        }
+      }
+    });
   }
 }
