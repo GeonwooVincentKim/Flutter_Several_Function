@@ -50,6 +50,7 @@ class _BodyState extends State<Body>{
                       Expanded(
                         child: ListView.separated(
                             shrinkWrap: true,
+                            physics: NeverScrollableScrollPhysics(),
                             separatorBuilder: (context, index) =>
                                 transparent_divider(),
                             itemCount: listUp.length,
@@ -105,19 +106,20 @@ class _BodyState extends State<Body>{
 
                 // For the codes that belows 'COMPILED'.
                 Row(
-                    children: <Widget>[
-                      Expanded(
-                        child: ListView.separated(
-                            separatorBuilder: (context, index) =>
-                            new Divider(
-                              color: Colors.transparent,
-                            ),
-                            shrinkWrap: true,
-                            itemCount: listDown.length,
-                            itemBuilder: (context, index) => listview_separated_down()
+                  children: <Widget>[
+                    Expanded(
+                      child: ListView.separated(
+                        shrinkWrap: true,
+                        physics: NeverScrollableScrollPhysics(),
+                        separatorBuilder: (context, index) =>
+                        new Divider(
+                          color: Colors.transparent,
                         ),
+                        itemCount: listDown.length,
+                        itemBuilder: (context, index) => listview_separated_down()
                       ),
-                    ]
+                    ),
+                  ]
                 ),
 
               ],
