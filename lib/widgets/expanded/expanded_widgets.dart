@@ -40,7 +40,7 @@ class expanded_widgets_down extends StatelessWidget{
   2. expanded_widgets_down_detail
 */
 // ignore: camel_case_types
-class expanded_widgets_left_detail extends StatelessWidget{
+class ProceededImage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -61,7 +61,7 @@ class expanded_widgets_left_detail extends StatelessWidget{
 
 
 // ignore: camel_case_types
-class expanded_widgets_front_detail extends StatelessWidget{
+class ProcessingImage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -77,7 +77,7 @@ class expanded_widgets_front_detail extends StatelessWidget{
 }
 
 // ignore: camel_case_types
-class expanded_widgets_behind_detail extends StatelessWidget{
+class ProcessingText extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -94,7 +94,7 @@ class expanded_widgets_behind_detail extends StatelessWidget{
 }
 
 // ignore: camel_case_types
-class expanded_widgets_right_detail extends StatelessWidget{
+class ProceededText extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(

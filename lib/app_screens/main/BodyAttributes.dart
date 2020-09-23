@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/app_screens/details/details.dart';
+import 'package:flutter_app/app_screens/details/details_attributes/details_body.dart';
+import 'package:flutter_app/app_screens/main/Body.dart';
 import 'package:flutter_app/shared/helpers/icomoon.dart';
 import 'package:flutter_app/widgets/expanded/body_details.dart';
 import 'package:flutter_app/widgets/expanded/divider.dart';
@@ -21,30 +24,39 @@ class InProcessList extends StatelessWidget{
               borderRadius: BorderRadius.circular(10.0),
               child: Container(
                 height: 67,
-                child: Dismissible(
-                    key: Key(item),
-                    onDismissed: (direction) {
-                      // setState(() {
-                      //   listUp.removeAt(index);
-                      // });
-                      Scaffold.of(context).showSnackBar(
-                          SnackBar(content:
-                          Text("$item dismissed")
-                          )
-                      );
-                    },
-                    background: Container(
-                      color: Colors.amber,
-                      alignment: Alignment(-0.9, 0.0),
-                      child: Icon(IconMoon.ipencil, color: Colors.white, size: 30.0,),
-                    ),
-                    secondaryBackground: Container(
-                      color: Colors.green,
-                      alignment: Alignment(0.9, 0.0),
-                      child: Icon(IconMoon.icheck2, color: Colors.white, size: 30.0,),
-                    ),
-                    child: listview_separated_up()
-                ),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context, MaterialPageRoute(builder: (context){return DetailPage();})
+                    );
+                  },
+                  child: Dismissible(
+                      key: Key(item),
+                      onDismissed: (direction) {
+                        // setState(() {
+                        //   listUp.removeAt(index);
+                        // });
+                        Scaffold.of(context).showSnackBar(
+                            SnackBar(content:
+                            Text("$item dismissed")
+                            )
+                        );
+                      },
+                      background: Container(
+                        color: Colors.amber,
+                        alignment: Alignment(-0.9, 0.0),
+                        child: Icon(IconMoon.ipencil, color: Colors.white, size: 30.0,),
+                      ),
+                      secondaryBackground: Container(
+                        color: Colors.green,
+                        alignment: Alignment(0.9, 0.0),
+                        child: Icon(IconMoon.icheck2, color: Colors.white, size: 30.0,),
+                      ),
+
+                      child: ProcessingList()
+                  ),
+                )
+
               ),
 
             );
@@ -67,7 +79,19 @@ class CompletedList extends StatelessWidget{
             color: Colors.transparent,
           ),
           itemCount: listDown.length,
-          itemBuilder: (context, index) => listview_separated_down()
+          itemBuilder: (context, index) {
+            return Container(
+              child: GestureDetector(
+                onTap: (){
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context){return DetailPage();})
+                  );
+                },
+                child: ProceededList(),
+              ),
+            );
+          }
+          // itemBuilder: (context, index) => ProceededList()
       ),
     );
   }

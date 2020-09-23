@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'expanded_widgets.dart';
 
 // ignore: camel_case_types
-class listview_separated_up extends StatelessWidget{
+class ProcessingList extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -11,19 +11,18 @@ class listview_separated_up extends StatelessWidget{
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10.0),
       ),
-      height: 70,
       child: Row(
         children: [
           Expanded(
               flex: 1,
               // For Top-part Widgets, the Main
-              child: expanded_widgets_front_detail()
+              child: ProcessingImage()
           ),
 
           Expanded(
               flex: 3,
               // For Below-part Widgets, the Main
-              child: expanded_widgets_behind_detail()
+              child: ProcessingText()
           )
         ],
       ),
@@ -34,7 +33,7 @@ class listview_separated_up extends StatelessWidget{
 
 
 // ignore: camel_case_types
-class listview_separated_down extends StatelessWidget{
+class ProceededList extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -42,19 +41,18 @@ class listview_separated_down extends StatelessWidget{
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10.0),
       ),
-      height: 70,
       child: Row(
         children: [
           Expanded(
               flex: 1,
               // For Top-part Widgets, the Main
-              child: expanded_widgets_left_detail()
+              child: ProceededImage()
           ),
 
           Expanded(
               flex: 3,
               // For Below-part Widgets, the Main
-              child: expanded_widgets_right_detail()
+              child: ProceededText()
           )
         ],
       ),

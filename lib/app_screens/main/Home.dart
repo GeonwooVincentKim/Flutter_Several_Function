@@ -55,7 +55,7 @@ class _HomeState extends State<Home>{
       onPageChanged: (index){
         pageChanged(index);
       },
-      scrollDirection: Axis.horizontal,
+      // scrollDirection: Axis.horizontal,
       children: <Widget>[
         Body(),
         DiscoverPage(),
@@ -113,11 +113,11 @@ class _HomeState extends State<Home>{
         case 0: {
           //Navigator.pushNamed(context, '/home');
           // onAddButtonTapped(1);
-          _title="SETTINGS";
+          _title="MY GAMES";
           break;
         }
         case 1:{
-          // Navigator.pushNamed(context, '/discover');
+          //Navigator.pushNamed(context, '/discover');
           // onAddButtonTapped(1);
           _title="DISCOVER";
           break;

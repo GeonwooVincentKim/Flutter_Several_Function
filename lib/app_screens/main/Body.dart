@@ -48,7 +48,7 @@ class _BodyState extends State<Body>{
                 // For the codes that belows 'IN PROGRESS'.
                 Row(
                   children: <Widget>[
-                    InProcessList()
+                    InProcessList(),
                   ]
                 ),
 
