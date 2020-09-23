@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/shared/helpers/icomoon.dart';
+import 'package:flutter_app/app_screens/main/BodyAttributes.dart';
+
 import 'package:flutter_app/widgets/expanded/body_details.dart';
 import 'package:flutter_app/widgets/expanded/divider.dart';
 import 'package:flutter_app/widgets/expanded/expanded_widgets.dart';
@@ -46,52 +47,9 @@ class _BodyState extends State<Body>{
                 // Import buttons that combined Image and Text.
                 // For the codes that belows 'IN PROGRESS'.
                 Row(
-                    children: <Widget>[
-                      Expanded(
-                        child: ListView.separated(
-                            shrinkWrap: true,
-                            physics: NeverScrollableScrollPhysics(),
-                            separatorBuilder: (context, index) =>
-                                transparent_divider(),
-                            itemCount: listUp.length,
-                            itemBuilder: (context, index) {
-                              final item = listUp[index];
-                              return ClipRRect(
-                                borderRadius: BorderRadius.circular(10.0),
-                                child: Container(
-                                  height: 67,
-                                  child: Dismissible(
-                                      key: Key(item),
-                                      onDismissed: (direction) {
-                                        // setState(() {
-                                        //   listUp.removeAt(index);
-                                        // });
-                                        Scaffold.of(context).showSnackBar(
-                                            SnackBar(content:
-                                            Text("$item dismissed")
-                                            )
-                                        );
-                                      },
-                                      background: Container(
-                                        color: Colors.amber,
-                                        alignment: Alignment(-0.9, 0.0),
-                                        child: Icon(IconMoon.ipencil, color: Colors.white, size: 30.0,),
-                                      ),
-                                      secondaryBackground: Container(
-                                        color: Colors.green,
-                                        alignment: Alignment(0.9, 0.0),
-                                        child: Icon(IconMoon.icheck2, color: Colors.white, size: 30.0,),
-                                      ),
-                                      child: listview_separated_up()
-                                  ),
-                                ),
-
-                              );
-                            }
-                        ),
-                      ),
-                    ]
-
+                  children: <Widget>[
+                    MainList()
+                  ]
                 ),
 
                 transparent_divider(),

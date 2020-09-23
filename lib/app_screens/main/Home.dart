@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/app_screens/details/details_attributes/details_body.dart';
 import 'package:flutter_app/app_screens/discover/discover_attributes/discover_body.dart';
 import 'package:flutter_app/app_screens/main/Body.dart';
+import 'package:flutter_app/app_screens/main/HomeAttribute.dart';
 import 'package:flutter_app/app_screens/settings/SideMenu.dart';
 import 'package:flutter_app/shared/helpers/icomoon.dart';
 // ignore: implementation_imports
@@ -79,9 +81,8 @@ class _HomeState extends State<Home>{
       appBar: AppBar(
         backgroundColor: Colors.black87,
         title: Text(_title),
-        // title: Text(_title),
-        // title: Text(widget.title),
         centerTitle: true,
+        actions: AppbarActions(),
       ),
       body: buildPageView(),
       bottomNavigationBar: BottomNavigationBar(

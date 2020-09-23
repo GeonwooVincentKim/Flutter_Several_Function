@@ -44,6 +44,7 @@ class expanded_widgets_left_detail extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 67,
       child: ClipRRect(
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(10.0),
@@ -64,6 +65,7 @@ class expanded_widgets_front_detail extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 67,
       child: ClipRRect(
         child: Image(
           image: NetworkImage("https://www.gstatic.com/webp/gallery/1.jpg"),
@@ -97,14 +99,16 @@ class expanded_widgets_right_detail extends StatelessWidget{
   Widget build(BuildContext context) {
     return Container(
       height: 67,
-      padding: EdgeInsets.only(left: 10.0, top: 5.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
             topRight: Radius.circular(10.0),
             bottomRight: Radius.circular(10.0)),
         color: Colors.black12,
       ),
-      child: WidgetTextAlign(),
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+        child: WidgetTextAlign(),
+      ),
     );
   }
 }
