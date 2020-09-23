@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/app_screens/main/Body.dart';
-import 'file:///E:/flutter_test_project/flutter_app/lib/app_screens/settings/SideMenu.dart';
+import 'package:flutter_app/app_screens/settings/SideMenu.dart';
+
 import 'package:flutter_app/shared/helpers/icomoon.dart';
 import 'package:flutter_app/widgets/expanded/divider.dart';
 import 'package:flutter_app/widgets/expanded/widgets_attribute/Discover/widget_discover.dart';
 
 class Discover extends StatefulWidget{
-  Discover({Key key, this.title}): super(key: key);
+  final void Function(int) onAddButtonTapped;
+  Discover({Key key, this.title, this.onAddButtonTapped}): super(key: key);
   final String title;
   @override
   State<StatefulWidget> createState()
@@ -15,7 +17,7 @@ class Discover extends StatefulWidget{
 
 class _DiscoverState extends State<Discover>{
   String _title;
-  int _selectedPage = 1;
+  // int _selectedPage = 1;
   List<Widget> pageList = List<Widget>();
 
   @override
@@ -30,45 +32,14 @@ class _DiscoverState extends State<Discover>{
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: SideMenu(),
-      // appBar: AppBar(
-      //   backgroundColor: Colors.black87,
-      //   title: Text("tEXT"),
-      //   centerTitle: true,
-      // ),
+      appBar: AppBar(
+        backgroundColor: Colors.black87,
+        title: Text(_title),
+        centerTitle: true,
+      ),
       // body: Body(),
       body: DiscoverBody(),
-      // body: IndexedStack(
-      //   index: _selectedPage,
-      //   children: pageList,
-      // ),
-      // bottomNavigationBar: BottomNavigationBar(
-      //   currentIndex: _selectedPage,
-      //   backgroundColor: Colors.black87,
-      //   type: BottomNavigationBarType.fixed,
-      //   selectedItemColor: Colors.white,
-      //   unselectedItemColor: Colors.white,
-      //   onTap: _onItemTapped,
-      //   iconSize: 50,
-      //   items: [
-      //     BottomNavigationBarItem(
-      //       icon: Icon(IconMoon.igamepad),
-      //       title: Text('My Games'),
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(IconMoon.isearch),
-      //       title: Text('Discover'),
-      //     ),
-      //   ],
-      //   //currentIndex: _selectedIndex,
-      //   // selectedFontSize: 15,
-      // ),
-      // body: Body_Divide_Test(),
     );
-  }
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedPage = index;
-    });
   }
 }
 

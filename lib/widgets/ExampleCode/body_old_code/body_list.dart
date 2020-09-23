@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/app_screens/Home.dart';
+import 'file:///E:/flutter_test_project/flutter_app/lib/app_screens/main/Home.dart';
 import 'package:flutter_app/widgets/expanded/divider.dart';
 import 'package:flutter_app/widgets/expanded/expanded_widgets.dart';
 
