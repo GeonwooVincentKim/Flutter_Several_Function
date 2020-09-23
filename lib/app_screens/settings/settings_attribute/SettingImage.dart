@@ -20,18 +20,21 @@ class ImageAttribute extends StatelessWidget{
             ),
           ),
           child: Stack(
+            overflow: Overflow.visible,
             children: <Widget>[
               Positioned(
-                bottom: 10, right: 18,
+                bottom: -10, right: 15,
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(12),
-                  child: Icon(
-                    IconMoon.iedit,
-                    color: Colors.white,
+                  borderRadius: BorderRadius.circular(100),
+                  child: Container(
+                    color: Colors.grey,
+                    padding: EdgeInsets.all(10),
+                    child: Icon(
+                      IconMoon.iedit,
+                      color: Colors.white,
+                    ),
                   ),
-
                 ),
-                // child:
               )
             ],
           ),
